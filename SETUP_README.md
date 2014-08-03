@@ -12,7 +12,7 @@ If you will not be attending CoderDojoTC or you want to get your environment sor
 ####Python editor
 In the CoderDojoTC sessions, we use [IDLE](https://docs.python.org/2/library/idle.html) to run the Python scripts.
 
-IDLE comes bundled with Python. If your machine does not already have IDLE, download Python 2.7 for your machine [here](https://www.python.org/download/releases/2.7.7/).
+IDLE comes bundled with Python. If your machine does not already have IDLE, download and install Python 2.7 for your machine [here](https://www.python.org/download/releases/2.7.7/).
 
 ####Running the scripts
 1. If you haven't done so already, start the CraftBukkit server by double clicking on the *start.command* file. A Terminal or DOS window will open and you'll see server log text accumulate here. When the server is done loading, you will see something like this: `[INFO] Done (1.599s)! For help, type "help" or "?"` If there are errors in the server log, make sure you are connected to the internet and make sure you have installed Java as part of the server setup instructions above. These are the two most common errors we see during server startup.
