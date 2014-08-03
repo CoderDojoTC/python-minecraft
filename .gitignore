@@ -1,5 +1,13 @@
 *.py[cod]
 
+.DS_Store
+*~
+*.pyc
+*.swp
+.coverage
+*.log
+node_modules
+
 # C extensions
 *.so
 
@@ -34,3 +42,6 @@ nosetests.xml
 .mr.developer.cfg
 .project
 .pydevproject
+
+# jetbrains/pycharm
+.idea
