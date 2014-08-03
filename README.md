@@ -1,7 +1,7 @@
 python-minecraft
 ================
 
-Example Python scripts for use with Minecraft at CoderDojo Twin Cities.
+This repository contains example Python scripts for use with Minecraft at [CoderDojo Twin Cities](http://www.coderdojotc.org/).
 
 The actual MCPi API v0.1_1 has been unceremoniously included in this repository in the interest of getting students up and running quickly. It was obtained from [pi.minecraft.net](http://pi.minecraft.net/).
 
