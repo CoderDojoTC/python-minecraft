@@ -5,7 +5,7 @@ This repository contains example Python scripts for use with Minecraft at [Coder
 
 The actual MCPi API v0.1_1 has been unceremoniously included in this repository in the interest of getting students up and running quickly. It was obtained from [pi.minecraft.net](http://pi.minecraft.net/).
 
-Go [here](/SETUP_README.md) for instructions on how to get your environemnt up and running.
+Go [here](/SETUP_README.md) for instructions on how to get the rest of your environemnt up and running.
 
 Coordinate System
 ------------------
