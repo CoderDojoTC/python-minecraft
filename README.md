@@ -3,11 +3,13 @@ python-minecraft
 
 Example Python scripts for use with Minecraft at CoderDojo Twin Cities.
 
-The actual MCPi API v0.1_1 has been unceremoniously included in this repository in the interest of getting students up and running quickly.
+The actual MCPi API v0.1_1 has been unceremoniously included in this repository in the interest of getting students up and running quickly. It was obtained from [pi.minecraft.net](http://pi.minecraft.net/).
+
+Go [here](/SETUP_README.md) for instructions on how to get your environemnt up and running.
 
 Coordinate System
 ------------------
-Most coordinates are in the form of a three integer vector (x,y,z) which address a specific tile in the game world. (0,0,0) is the spawn point sea level. (x,z) is the ground plane and Y is towards the sky.
+Most coordinates are in the form of a three integer vector (x,y,z) which address a specific tile in the game world. (0,0,0) is the spawn point sea level. (x,z) is the ground plane and Y is towards the sky. In other words, x is left and right, z is forward and backward, and y is up and down.
 
 ![Minecraft's odd x-y-z coordinate system](/ignoreme/coordinates.png)
 
@@ -156,12 +158,5 @@ Resources and Credits
 [MCPi API Examples](http://www.stuffaboutcode.com/2013/02/raspberry-pi-minecraft-install.html)<br>
 [More MCPi scripts](https://github.com/brooksc/mcpipy)<br>
 
-Note that although the StuffAboutCode links discuss using an Raspberry Pi, you don't need a Raspberry Pi to use the API. We're using CraftBukkit's local server instead.
+Note that although the StuffAboutCode links discuss using an Raspberry Pi, you don't need a Raspberry Pi to use the API. We're using CraftBukkit's local server instead. More information about that is [here](/SETUP_README.md)
 
-###More about CraftBukkit
-[Programming Minecraft with Bukkit](http://www.stuffaboutcode.com/2013/06/programming-minecraft-with-bukkit.html)
-
-If you're interested in setting this environemnt up on your personal laptop, if you have a Mac, CoderDojoTC can provide you with shortcuts. If you have Windows or otherwise like to do things the hard way, here is a general guide for getting things set up:
-
-<ol><li>Follow <a href="http://blog.lostbearlabs.com/2013/04/25/using-the-minecraft-api-without-a-raspberry-pi-craftbukkit-and-raspberryjuice/" target="_blank">these instructions</a> for setting up an environment without a Raspberry PI.
-<ul><li>They will direct you <a href="http://wiki.bukkit.org/Setting_up_a_server" target="_blank">here</a> to set up the server.</li><li>Make sure you download the 1.6 server, as the api and scripts included in this repository are compatible with the 1.6.4 client and server.</li></ul></li><li>If you download the latest client (launcher), you'll need to set the version back to 1.6.4 by clicking on *Edit Profile* and selecting *release 1.6.4* from the *Use version* drop-down.</li><li>Once you have the server up and running, you can download any number of fun plugins <a href="http://dev.bukkit.org/bukkit-plugins/" target="_blank">here</a>. To install a plugin, download the jar file, move it to the server's plugins folder, and restart the server.</li></ol>
