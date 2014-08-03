@@ -42,7 +42,7 @@ Look up the coordinates that the player is currently positioned at.
 Set the player’s position to the specified coordinates.
 
 ###Blocks
-mcpi/block.py is the ultimate authority on which blocks are available for your use. Those code constants are copied and pasted here for convenience. The underlying engine actually provides all of [these](http://minecraft.gamepedia.com/Data_values_(Pocket_Edition)) blocks, not all of which are included in the MCPi block module. You are free to edit mcpi/block.py to add more blocks using the decimal value listed and following the pattern you find in block.py.
+[mcpi/block.py](https://github.com/sarahhagstrom/python-minecraft/blob/master/mcpi/block.py) is the ultimate authority on which blocks are available for your use. Those code constants are copied and pasted here for convenience. The underlying engine actually provides all of [these](http://minecraft.gamepedia.com/Data_values_(Pocket_Edition)) blocks, not all of which are included in the MCPi block module. You are free to edit mcpi/block.py to add more blocks using the decimal value listed and following the pattern you find in [block.py](https://github.com/sarahhagstrom/python-minecraft/blob/master/mcpi/block.py).
 
     AIR
     STONE
