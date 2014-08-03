@@ -15,12 +15,12 @@ In the CoderDojoTC sessions, we use [IDLE](https://docs.python.org/2/library/idl
 IDLE comes bundled with Python. If your machine does not already have IDLE, download and install Python 2.7 for your machine [here](https://www.python.org/download/releases/2.7.7/).
 
 ####Running the scripts
-1. If you haven't done so already, start the CraftBukkit server by double clicking on the *start.command* file. A Terminal or DOS window will open and you'll see server log text accumulate here. When the server is done loading, you will see something like this: `[INFO] Done (1.599s)! For help, type "help" or "?"` If there are errors in the server log, make sure you are connected to the internet and make sure you have installed Java as part of the server setup instructions above. These are the two most common errors we see during server startup.
-2. Launch the Minecraft client if you haven't already, login, click Play, and join your server (localhost:25565). (If you do not already have a Minecraft login, you can get one <a href="https://account.mojang.com/register" target="_blank">here</a>.)
+1. If you haven't done so already, start the CraftBukkit server by double clicking on the <b>start.command</b> file. A Terminal or DOS window will open and you'll see server log text accumulate there. When the server is done loading, you will see something like this: `[INFO] Done (1.599s)! For help, type "help" or "?"` If there are errors in the server log, make sure you are connected to the internet and make sure you have installed Java as part of the server setup instructions above. These are the two most common errors we see during server startup.
+2. Launch the Minecraft client if you haven't already, login, click Play, and join your server (localhost:25565). (If you do not already have a Minecraft login, you can get that <a href="https://account.mojang.com/register" target="_blank">here</a>.)
 3. Open the script you'd like to run in IDLE or another text editor or development environment.
 4. Make any modifications you'd like to make to the script.
 5. Save the script.
-6. If you're using IDLE, hit *F5* or select *Run Module* from the *Run* menu. Otherwise, you can run the script from the command line (Terminal or DOS) by changing to the directory the script is contained in and typing `python` followed by the name of the script you'd like to run.
+6. If you're using IDLE, hit <b>F5</b> or select <b>Run Module</b> from the <b>Run</b> menu. Otherwise, you can run the script from the command line (Terminal or DOS) by changing to the directory the script is contained in and typing `python` followed by the name of the script you'd like to run.
 7. While the script is running, you should see more server logs accumulate in the server Terminal or DOS window.
 8. When the script completes, return to your Minecraft world to see the results.
 
