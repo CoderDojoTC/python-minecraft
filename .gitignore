@@ -45,3 +45,5 @@ nosetests.xml
 
 # jetbrains/pycharm
 .idea
+
+*/.vagrant
