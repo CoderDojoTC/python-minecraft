@@ -14,8 +14,14 @@ SESSION_NAME=minecraft-lab
 # See if the server has been configured
 if ! grep -q 'eula=true' ${MINECRAFT_LAB}/run/eula.txt
 then
-    echo "eula=true" > ${MINECRAFT_LAB}/run/eula.txt
+    # Start the server so that it creates its standard files. It will
+    # exit very quickly because the eula file hasn't been tweaked
+    # yet. Then, we can make our edits.
+    cd ${MINECRAFT_LAB}/run
+    java -jar ${MINECRAFT_LAB}/bin/CanaryMod-1.7.10-1.1.2.jar nogui
+
     perl -pi.old -e "s{player-idle-timeout=1}{player-idle-timeout=15};" ${MINECRAFT_LAB}/run/config/server.cfg
+    echo "eula=true" > ${MINECRAFT_LAB}/run/eula.txt
 fi
 
 # Start up Minecraft
@@ -29,3 +35,8 @@ tmux new-window -d -t ${SESSION_NAME} -n ipython "ipython notebook --profile=nbs
 # Start some other useful windows
 tmux new-window -d -t ${SESSION_NAME} -n top "top"
 tmux new-window -d -t ${SESSION_NAME} -n bash "bash"
+
+cat <<EOF
+Environment started. Use 'attach-env.sh' to connect to the controlling
+terminals. Use 'stop-env.sh' to halt the environment.
+EOF
