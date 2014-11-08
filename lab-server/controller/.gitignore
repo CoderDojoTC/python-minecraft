@@ -1,0 +1,2 @@
+# Ignore the config file, since it probably contains sensitive data
+lsc.ini
