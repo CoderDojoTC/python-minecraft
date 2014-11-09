@@ -1,0 +1,6 @@
+six==1.8.0
+cliff-tablib==1.1
+cliff==1.7.0
+gspread==0.2.2
+pbr==0.10.0
+csvkit==0.9.0
