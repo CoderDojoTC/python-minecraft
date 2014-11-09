@@ -28,6 +28,19 @@ fi
 cd ${MINECRAFT_LAB}/run
 tmux new-session -d -s ${SESSION_NAME} -n minecraft "java -Xincgc -Xmx1G -jar ${MINECRAFT_LAB}/bin/CanaryMod-1.7.10-1.1.2.jar nogui"
 
+# Wait for server to start
+while ! ((tmux capture-pane; tmux save-buffer -) |grep -q Done) && killall -0 java ; do
+    sleep 1
+done
+
+# Do some server configuration
+tmux send-keys -t ${SESSION_NAME} -l '
+gamerule doMobSpawning false
+gamerule doDaylightCycle false
+time set 1000
+defaultgamemode 1
+'
+
 # Start up IPython
 cd ${MINECRAFT_LAB}/python-minecraft
 tmux new-window -d -t ${SESSION_NAME} -n ipython "ipython notebook --profile=nbserver"
