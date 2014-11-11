@@ -14,7 +14,7 @@ import sys
 
 from cliff.app import App
 from cliff.commandmanager import CommandManager
-#import lsc
+import lsc
 
 
 class LabServerControllerApp(App):
@@ -26,9 +26,8 @@ class LabServerControllerApp(App):
     def __init__(self):
         super(LabServerControllerApp, self).__init__(
             description=__doc__.strip(),
-#            version=lsc.__version__,
-            version='0.1',
-            command_manager=CommandManager('lsc.commands'),
+            version=lsc.__version__,
+            command_manager=CommandManager('lab_server_controller'),
             )
 
 
