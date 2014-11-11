@@ -18,29 +18,29 @@
 # ----------------------------------------------------------------------------
 # Semi-configurable options
 
-MINECRAFT_LAB=/home/vagrant/minecraft_lab
-RASPBERRY_JUICE_VERSION=1.0.2
 LAB_USER=vagrant
+MINECRAFT_LAB=/home/${LAB_USER}/minecraft_lab
+RASPBERRY_JUICE_VERSION=1.0.2
 CODERDOJO_REPO=https://github.com/mikemccllstr/mikemccllstr-python-minecraft.git
 
 
 # ----------------------------------------------------------------------------
 # Install pre-dependencies available in Ubuntu itself
 
-apt-get update
-apt-get -y upgrade
+#apt-get update
+#apt-get -y upgrade
 
 # Install the JRE used by the CanaryMod server
-apt-get -y install openjdk-7-jre-headless
+#apt-get -y install openjdk-7-jre-headless
 
 # Install git, so we can clone copies of repositories we use
-apt-get -y install git
+#apt-get -y install git-core
 
 # Install the IPython Notebook
-apt-get -y install ipython-notebook
+#apt-get -y install ipython-notebook
 
 # Install Python libraries that are used by some demos
-apt-get -y install python-imaging python-pygame
+#apt-get -y install python-imaging python-pygame
 
 # Install tools used by this setup script.
 #
@@ -48,12 +48,12 @@ apt-get -y install python-imaging python-pygame
 # generate good random numbers without stalling.
 #
 # `apg` is used to generate passwords.
-apt-get -y install apg haveged
+#apt-get -y install apg haveged
 
 # Make this environment enough like our Vagrant environment so that
 # the remainder of this script will run.
 adduser ${LAB_USER}
-apt-get -y install curl openssl tmux psmisc
+#apt-get -y install curl openssl tmux psmisc
 
 
 # ----------------------------------------------------------------------------
@@ -121,6 +121,19 @@ EOF
 # they will be found in the user's path, and are easy to invoke like:
 #    vagrant ssh -c COMMAND
 ln -s /vagrant/user-commands /home/${LAB_USER}/bin
+
+# Save our settings in a file so they can be accessed by later scripts
+TMP_FILE=$(mktemp --tmpdir=${MINECRAFT_LAB})
+chmod go-rwx ${TMP_FILE}
+mv ${TMP_FILE} ${MINECRAFT_LAB}/settings
+
+cat >>${MINECRAFT_LAB}/settings <<EOF
+MINECRAFT_LAB=${MINECRAFT_LAB}
+RASPBERRY_JUICE_VERSION=${RASPBERRY_JUICE_VERSION}
+LAB_USER=${LAB_USER}
+CODERDOJO_REPO=${CODERDOJO_REPO}
+PASSWORD_PLAINTEXT=${PASSWORD_PLAINTEXT}
+EOF
 
 # Fix up permissions
 chown -R ${LAB_USER}:${LAB_USER} ${MINECRAFT_LAB}

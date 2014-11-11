@@ -7,7 +7,7 @@
 #
 #    tmux attach -t minecraft-lab
 
-MINECRAFT_LAB=$HOME/minecraft_lab
+. $HOME/minecraft_lab/settings
 
 SESSION_NAME=minecraft-lab
 
@@ -20,7 +20,10 @@ then
     cd ${MINECRAFT_LAB}/run
     java -jar ${MINECRAFT_LAB}/bin/CanaryMod-1.7.10-1.1.2.jar nogui
 
-    perl -pi.old -e "s{player-idle-timeout=1}{player-idle-timeout=15};" ${MINECRAFT_LAB}/run/config/server.cfg
+    perl -pi.old -e "s{player-idle-timeout=1}{player-idle-timeout=15};
+                     s{rcon-enabled=false}{rcon-enabled=true};
+                     s{rcon-password=}{rcon-password=${PASSWORD_PLAINTEXT}};" \
+			 ${MINECRAFT_LAB}/run/config/server.cfg
     echo "eula=true" > ${MINECRAFT_LAB}/run/eula.txt
 fi
 
