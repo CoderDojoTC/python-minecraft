@@ -1,0 +1,7 @@
+# (Login) Message of the Day
+# See forums thread http://forums.canarymod.net/?topic=3619
+# for the list of default variables
+# or the plugins threads that add-on to the Message Of The Day
+# Lines may be prefixed with {permission:<[node] or ![node] or [node]&[node]&![node]>}
+# Examples: {permission:canary.super.administor} {permission:canary.world.build&!canary.super.administrator}
+# # # # #
