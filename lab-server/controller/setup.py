@@ -37,6 +37,7 @@ setup(
     install_requires=[
         'cliff',
         'cliff-tablib',
+        'docker-py',
         'gspread',
         'csvkit',
     ],
@@ -48,7 +49,10 @@ setup(
 
         'lab_server_controller': [
             'test = lsc.commands.environment:Test',
-            'show = lsc.commands.controlsheet:Show',
+
+            'show = lsc.commands.lab:Show',
+
+            'process-commands = lsc.commands.lab:ProcessCommands',
         ],
 
         'cliff.formatter.list': [

@@ -19,8 +19,6 @@ import lsc
 
 class LabServerControllerApp(App):
 
-    CONSOLE_MESSAGE_FORMAT = '%(levelname)s: %(name)s %(message)s'
-
     log = logging.getLogger(__name__)
 
     def __init__(self):
@@ -29,6 +27,18 @@ class LabServerControllerApp(App):
             version=lsc.__version__,
             command_manager=CommandManager('lab_server_controller'),
             )
+
+
+    def configure_logging(self):
+        ''' Override the console logging to our preferences
+        '''
+        if self.options.debug:
+            self.CONSOLE_MESSAGE_FORMAT = '%(asctime)s %(levelname)-8s %(name)s\t%(message)s'
+        else:
+            self.CONSOLE_MESSAGE_FORMAT = '%(levelname)-8s %(name)s %(message)s'
+
+        # Pick up any default initializations
+        super(LabServerControllerApp, self).configure_logging()
 
 
     def initialize_app(self, argv):

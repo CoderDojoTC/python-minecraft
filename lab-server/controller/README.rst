@@ -93,12 +93,13 @@ Control Sheet Commands
 
 The commands in this section help with managing the Control Sheet.
 
-The :command:`lsc show` command dumps the information from the Control
+The :command:`lsc show` command dumps the contents of the Control
 Sheet.
 
-The :command:`lsc update-states` command walks through the Control
-Sheet and attempts to move it from its current state to the desired
-state, as indicated in the sheet.
+The :command:`lsc process-commands` command walks through the Control
+Sheet and attempts to act on each command in the sheet, as indicated
+in the sheet. It also checks the current state of each instance and
+updates the appropriate columns in the Control Sheet.
 
 
 Control Sheet Format
@@ -120,7 +121,7 @@ Inst #
   Some of the other columns are calculated based on this identifier,
   but it is not a strict requirement.
 
-Student's Name
+Student Name
   This is the name of the student who will be using this instance. It
   is here to make it easier to associate an instance with the person
   who will be using it.
@@ -175,7 +176,7 @@ IPython Port
   special purposes, so you should make sure the port numbers in this
   field fall between 1,025 and 65,535.
 
-IPython Password
+Student Password
   When a student connects to the IPython Notebook server with a web
   browser, it will prompt them to enter the password contained in this
   column. It is recommended that you generate the passwords in this
@@ -205,63 +206,37 @@ Instance Type
   |               | assigned Minecraft port. Please try again."      |
   +---------------+--------------------------------------------------+
 
-World Seed
-  This is the Seed value used to create the Minecraft world within the
-  Instance. Left blank, Minecraft will pick a seed at random, so each
-  student will start off in a world unlike any other. Some seeds give
-  a better starting point for some exercises, so it is recommended to
-  find a good seed value and assign it to all students.
-
-Desired Instance State
+Command
   This is the way you control the instances. This column should
   contain one of the values from the first column in the table
-  below. The LSC uses this value to decide what to do with each
-  instance when you the :command:`lsc update-states` command is run.
+  below. The LSC interprets the command you entered and moves the
+  instance into the desired state when the :command:`lsc
+  process-commands` command is run.
 
-  +-----------+-------------------------------------------------------------+
-  | Desired   |                                                             |
-  | Instance  |                                                             |
-  | State     | Description                                                 |
-  +-----------+-------------------------------------------------------------+
-  | UP        | The instance should be created (if necessary) and started.  |
-  +===========+=============================================================+
-  | DOWN      | The instance should be stopped (if running).                |
-  +===========+=============================================================+
-  | NONE      | Pretend like this row isn't present. This means "ignore me".|
-  +===========+=============================================================+
-  | DESTROY   | The instance should be stopped (if running) and destroyed   |
-  |           | if present.                                                 |
-  +===========+=============================================================+
-  | RESTART   | The instance should be stopped and then restarted,          |
-  |           | preserving the Minecraft world and any Python files the     |
-  |           | student might have changed. This is like a reboot of the    |
-  |           | instance.                                                   |
-  +===========+=============================================================+
-  | SAVE      | This pauses the instance and saves the current world and    |
-  |           | the student's Python files into the S3 bucket.              |
-  +===========+=============================================================+
-  | LOAD      | This replaces the files inside the instance with those in   |
-  |           | the student's S3 bucket.                                    |
-  +-----------+-------------------------------------------------------------+
+  +----------------+----------------------------------------------------------+
+  | Command        | Description                                              |
+  +----------------+----------------------------------------------------------+
+  | RUN            | The instance should be moved to a normal, running state. |
+  |                | This is the state where students can use the instance.   |
+  +================+==========================================================+
+  | DOWN           | The instance should be stopped (if running), but the     |
+  |                | files will be preserved.                                 |
+  +================+==========================================================+
+  | RESETWORLD     | Stop the instance (if running) and clear out the world   |
+  |                | files. This is most useful if the student has            |
+  |                | done something horrible to their world and needs a fresh |
+  |                | one to start over.                                       |
+  +================+==========================================================+
+  | RESETNOTEBOOKS | Stop the instance (if running) and clear out the IPython |
+  |                | notebook files. This is for when the student has         |
+  |                | done something horrible to their notebook files and      |
+  |                | and needs a fresh set to start over.                     |
+  +================+==========================================================+
+  | DESTROY        | The instance should be stopped (if running) and all      |
+  |                | related files are permanently erased.                    |
+  +----------------+----------------------------------------------------------+
 
-Current Instance State
-  This column is updated when the :command:`lsc update-states` command
-  is run. It is the way the LSC tells you what's going on with the
-  instance. It will contain one of the values from the table
-  below. You should not manually edit this value.
-
-  +-----------+-------------------------------------------------------------+
-  | Current   |                                                             |
-  | Instance  |                                                             |
-  | State     | Description                                                 |
-  +-----------+-------------------------------------------------------------+
-  | BAD INPUT | There is a problem interpreting the values on this          |
-  |           | instance's row in the Control Sheet. Please check them.     |
-  +===========+=============================================================+
-  | UP        | The instance is up and running.                             |
-  +-----------+-------------------------------------------------------------+
-
-State As Of
+Status As Of
   Timestamp of when the Current Instance State was last updated. This
   should be pretty close to the current time. You should not manually
   edit this value.

@@ -15,7 +15,11 @@ _config.read([os.path.join(dirname, CONFIG_FILENAME)
               for dirname in CONFIG_SEARCH_PATH])
 
 # These are the values we expect to find
-email       = _config.get('Lab Config Data', 'email')
-password    = _config.get('Lab Config Data', 'password')
-spreadsheet = _config.get('Lab Config Data', 'spreadsheet')
-worksheet   = _config.get('Lab Config Data', 'worksheet')
+email       = _config.get('Lab Config Sheet', 'email')
+password    = _config.get('Lab Config Sheet', 'password')
+spreadsheet = _config.get('Lab Config Sheet', 'spreadsheet')
+worksheet   = _config.get('Lab Config Sheet', 'worksheet')
+
+instance_data_dir  = _config.get('Instances', 'instance_data_dir')
+docker_control_url = _config.get('Instances', 'docker_control_url')
+sourcecode_repo    = _config.get('Instances', 'sourcecode_repo')
