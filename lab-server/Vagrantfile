@@ -1,0 +1,44 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+# This Vagrantfile sets up a Vagrant box that provides the full
+# python-minecraft lab server environment. This lab server environment
+# uses Docker to create a private environment for each student. Each
+# environment consists of a CanaryMod server, configured with the
+# RaspberryJuice plugin, and set up to host a Minecraft world. It also
+# includes an IPython Notebook server, configured to allow students to
+# work through the exercises of the python-minecraft code group.
+
+# Vagrantfile API/syntax version. Don't touch unless you know what you're doing!
+VAGRANTFILE_API_VERSION = "2"
+
+Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
+  # All Vagrant configuration is done here. The most common configuration
+  # options are documented and commented below. For a complete reference,
+  # please see the online documentation at vagrantup.com.
+
+  # Every Vagrant virtual environment requires a box to build off of.
+  config.vm.box = "ubuntu/trusty64"
+
+  # Forward a range of ports from the host to guest.
+  for i in 48000..48999
+    config.vm.network :forwarded_port, guest: i, host: i
+  end
+
+  # Provider-specific configuration so you can fine-tune various
+  # backing providers for Vagrant. These expose provider-specific options.
+  # Example for VirtualBox:
+  #
+  config.vm.provider "virtualbox" do |vb|
+    # Set vb.gui to true to leave a console running for the box. Leave
+    # it unset, or set to false, to get a headless box.
+    # vb.gui = true
+
+    # Use VBoxManage to change the memory allocated to the box:
+    vb.customize ["modifyvm", :id, "--memory", "2048"]
+  end
+
+  # Run the configuration script on the Vagrant box to finish setting
+  # it up.
+  config.vm.provision "shell", path: "lab-server-setup.sh"
+end
