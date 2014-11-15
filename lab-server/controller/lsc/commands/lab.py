@@ -63,7 +63,7 @@ class ProcessCommands(Lister):
             inst.dispatch()
 
             # Write the record if needed
-            #cs.update(rec)
+            cs.update(rec)
 
             # Save it, temp, so we can list it
             ret_val.append(rec.cols)

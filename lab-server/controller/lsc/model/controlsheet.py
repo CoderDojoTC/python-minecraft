@@ -1,6 +1,7 @@
 '''Data model abstraction over the Control Sheet'''
 
 import itertools
+import logging
 
 from collections import namedtuple
 
@@ -58,6 +59,8 @@ class Record(object):
 
 class Data(object):
     '''Wraps all operations on the Control Sheet'''
+
+    log = logging.getLogger(__name__)
 
     def __init__(self, email, password, sheetname, tabname):
         # Save the parameters
@@ -147,10 +150,25 @@ class Data(object):
             yield Record(sc, idx+2)
 
 
-    def replace(self, record):
-        '''Replace a single row from the current Sheet with new contents'''
+    def update(self, record):
+        '''Update an existing row with new contents of the Record'''
+
+        if record.cols == record.orig_cols:
+            # No changes, nothing to do
+            return
+
+        # Loop through the columns and update anything that has changed
+        rownum = record.row_number
+
+        for field in record.cols._fields:
+            if getattr(record.cols, field) != getattr(record.orig_cols, field):
+                colnum = COLUMN_IDENTIFIERS.index(field) + 1
+                self.log.debug("Updating {f} of rec {r.inst_nmbr}".format(f=field,
+                                                                          r=record.cols))
+                self.wks.update_cell(rownum, colnum, getattr(record.cols, field))
+                self.log.debug("Updated")
+
         self.cache_valid = False
-        raise NotImplementedYet()
 
 
     def append(self):
