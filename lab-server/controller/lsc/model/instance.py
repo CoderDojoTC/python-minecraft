@@ -2,9 +2,11 @@
 
 from datetime import datetime
 
+import functools
 import logging
 import os
 import os.path
+import shutil
 
 from docker import Client
 from docker import errors
@@ -168,6 +170,7 @@ class Instance(object):
             )
             self.lsc_message("Run response {0}".format(response))
 
+
     def down(self):
         ''' Down the instance
         '''
@@ -185,14 +188,53 @@ class Instance(object):
             self.lsc_message("Not running")
 
 
-    COMMAND_PLACEHOLDER = '_______'
+    def down_and_reset(self, world=False, notebooks=False, instance=False):
+        '''Down the instance, and optionally reset some or all of the state.
+
+        Use functools.partial() to create wrapper functions with one
+        or more flags preset.
+
+        When the instance is restarted, the pieces that were
+        reset/destroyed will be recreated. For example, deleting the
+        world while leaving the Python Notebook files will give a
+        student a clean place to run their scripts again.
+        '''
+
+        self.log.info("Preparing to down instance {0.inst_nmbr}".format(self.rec.cols))
+        self.ensure_docker_api()
+
+        if self.server_status() == 'Running':
+            self.docker_api.stop(container=self.safe_name(), timeout=15)
+        elif self.server_status() == 'Paused':
+            self.docker_api.unpause(self.safe_name())
+            self.docker_api.stop(container=self.safe_name(), timeout=15)
+
+        if instance and self.container_ids() != 'None':
+            self.docker_api.remove_container(container=self.safe_name())
+
+        if world and self.world_status() == 'Available':
+            shutil.rmtree(self.world_dir(), ignore_errors=True)
+
+        if notebooks and self.notebooks_status() == 'Available':
+            shutil.rmtree(self.notebook_dir(), ignore_errors=True)
+
+        if world and notebooks and instance:
+            self.lsc_message("Destroyed instance")
+        elif world:
+            self.lsc_message("Reset world")
+        elif notebooks:
+            self.lsc_message("Reset notebooks")
+        else:
+            self.lsc_message("Instance stopped")
+
+
+    COMMAND_PLACEHOLDER = ''
     COMMANDS = {
         'RUN': run,
-        'DOWN': down,
-        'RESETWORLD': unimplemented,
-        'RESETNOTEBOOKS': unimplemented,
-        'DESTROY': unimplemented,
-        '': noop,
+        'DOWN': functools.partial(down_and_reset),
+        'RESETWORLD': functools.partial(down_and_reset, world=True),
+        'RESETNOTEBOOKS': functools.partial(down_and_reset, notebooks=True),
+        'DESTROY': functools.partial(down_and_reset, world=True, notebooks=True, instance=True),
         COMMAND_PLACEHOLDER: noop,
     }
 
@@ -200,9 +242,10 @@ class Instance(object):
         ''' Invoke the appropriate method, based on the command in the record
         '''
         self.gather_status()
-        if self.rec.cols.command in self.COMMANDS:
+        cmd = self.rec.cols.command.upper()
+        if cmd in self.COMMANDS:
             try:
-                self.COMMANDS[self.rec.cols.command](self)
+                self.COMMANDS[cmd](self)
                 self.gather_status()
             except Exception, e:
                 self.lsc_message("Exception occurred: {e}".format(e=e))
