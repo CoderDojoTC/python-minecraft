@@ -1,9 +1,9 @@
 .. CoderDojo Twin Cities Python for Minecraft documentation master
    file, created by sphinx-quickstart on Fri Oct 24 00:52:04 2014.
 
-==========
- Contents
-==========
+=====================================================
+ Build Worlds in Minecraft with Python Documentation
+=====================================================
 
 This documentation supports the `CoderDojo Twin Cities's`_ *Build
 worlds in Minecraft with Python* code group. This group intends to
@@ -18,6 +18,26 @@ language. For example, in Scratch_.
 .. _Scratch: http://scratch.mit.edu/
 
 
+Getting Help
+============
+
+Having trouble? Here are some pointers this might be useful:
+
+* Take a look at the :doc:`FAQ <faq/index>`. We are loading this up
+  with answers to common questions. Maybe the answer to your question
+  is already here.
+
+* Looking for specific information? You might find it in the
+  :doc:`detailed table of contents <contents>`, or you might be able
+  to use the :ref:`search` or :ref:`genindex` to help you locate it.
+
+* If something is still unclear, we really would like to know. Please
+  visit our `ticket tracker`_ to let us know about the problem. Use
+  the :guilabel:`New Issue` button.
+
+.. _ticket tracker: https://github.com/CoderDojoTC/python-minecraft/issues
+
+
 Setup
 =====
 
@@ -29,7 +49,6 @@ this once per machine.
 .. toctree::
    :maxdepth: 2
 
-   setup/overview
    setup/windows
    setup/mac
    setup/ubuntu
@@ -66,19 +85,6 @@ Reference Material
 
 The final section contains reference material and covers other random
 topics.
-
-.. toctree::
-   :maxdepth: 2
-
-   reference/faq
-
-If you can't find what you're looking for in this table of contents,
-you might be able to use the :ref:`search` or :ref:`genindex` to help
-you locate it.
-
-..
-   The modindex isn't used at the moment
-   * :ref:`modindex`
 
 
 Copyright
