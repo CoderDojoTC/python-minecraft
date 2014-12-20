@@ -1,11 +1,11 @@
-=======================
- Overview of the Setup
-=======================
+==============================
+ Overview of the Architecture
+==============================
 
-You need several things to be able to participate in these
+There are many different programs and tools involved in these
 activities. This document introduces you to these pieces. The
-following pages show you how to set them up for your specific
-operating system.
+:doc:`setup instructions <setup/index>` show you how to set them up
+for your specific operating system.
 
  * `Minecraft`_
  * `CanaryMod Server`_
