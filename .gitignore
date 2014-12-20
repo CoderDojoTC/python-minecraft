@@ -47,3 +47,4 @@ nosetests.xml
 .idea
 
 */.vagrant
+docs/_build/*
