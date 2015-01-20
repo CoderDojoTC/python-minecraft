@@ -8,7 +8,6 @@ only need to do this once per machine.
 
 .. toctree::
    :maxdepth: 1
+   :glob:
 
-   windows
-   mac
-   ubuntu
+   *

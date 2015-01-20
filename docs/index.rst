@@ -41,17 +41,24 @@ Having trouble? Here are some pointers this might be useful:
 Setup
 =====
 
-This documentation is divided into several sections. The first section
-is focused on preparing your PC so that you can follow along with the
-other activities. This is a "one-time" job. You should only need to do
-this once per machine.
+Here are some instructions for setting up software to support
+different circumstances:
 
-.. toctree::
-   :maxdepth: 2
+* If you are interested in recreating the environment we use in the
+  CoderDojo lab, but for a single user, on your own PC, you should
+  consult our guide for :doc:`Vagrant <setup/vagrant>`.
 
-   setup/windows
-   setup/mac
-   setup/ubuntu
+* If you are interested in installing all the software needed to run
+  these examples directly on your PC (without using Vagrant to
+  simplify the job), we currently have a guide that covers doing so on
+  :doc:`Windows <setup/windows>`. Users of other platforms can consult
+  this guide and try to adapt it for their circumstances. Ultimately,
+  we intend to also provide guides for :doc:`Apple's OS X <setup/osx>`
+  and :doc:`Ubuntu Linux <setup/ubuntu>`.
+
+* If you are responsible for running a lab server that hosts multiple
+  student instances during a Coder Dojo session, you should consult
+  the :doc:`Lab Server <setup/lab-server>` guide.
 
 
 Tutorial
