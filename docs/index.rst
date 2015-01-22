@@ -31,6 +31,9 @@ Having trouble? Here are some pointers this might be useful:
   :doc:`detailed table of contents <contents>`, or you might be able
   to use the :ref:`search` or :ref:`genindex` to help you locate it.
 
+* Our :doc:`glossary <glossary>` might define a term that is new to
+  you.
+
 * If something is still unclear, we really would like to know. Please
   visit our `ticket tracker`_ to let us know about the problem. Use
   the :guilabel:`New Issue` button.

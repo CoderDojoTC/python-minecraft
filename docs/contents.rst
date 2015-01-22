@@ -18,6 +18,7 @@ the :doc:`Overview Page <index>` to be more user-friendly.
     examples/index
     reference/index
     faq/index
+    glossary
     todo
 
 
