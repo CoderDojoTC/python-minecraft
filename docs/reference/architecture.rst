@@ -3,9 +3,7 @@
 ==============================
 
 There are many different programs and tools involved in these
-activities. This document introduces you to these pieces. The
-:doc:`setup instructions <setup/index>` show you how to set them up
-for your specific operating system.
+activities. This document introduces you to these pieces.
 
  * `Minecraft`_
  * `CanaryMod Server`_

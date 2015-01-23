@@ -1,9 +1,6 @@
-.. CoderDojo Twin Cities Python for Minecraft documentation master
-   file, created by sphinx-quickstart on Fri Oct 24 00:52:04 2014.
-
-=====================================================
- Build Worlds in Minecraft with Python Documentation
-=====================================================
+=======================================
+ Build Worlds in Minecraft with Python
+=======================================
 
 This documentation supports the `CoderDojo Twin Cities's`_ *Build
 worlds in Minecraft with Python* code group. This group intends to
@@ -47,21 +44,23 @@ Setup
 Here are some instructions for setting up software to support
 different circumstances:
 
-* If you are interested in recreating the environment we use in the
-  CoderDojo lab, but for a single user, on your own PC, you should
-  consult our guide for :doc:`Vagrant <setup/vagrant>`.
+* **In the Classroom:** During a CoderDojo event, we host a lab
+  environment so you can get started quickly. Read the guide to
+  :doc:`connect to the lab server <setup/lab-user>`.
 
-* If you are interested in installing all the software needed to run
-  these examples directly on your PC (without using Vagrant to
-  simplify the job), we currently have a guide that covers doing so on
-  :doc:`Windows <setup/windows>`. Users of other platforms can consult
-  this guide and try to adapt it for their circumstances. Ultimately,
-  we intend to also provide guides for :doc:`Apple's OS X <setup/osx>`
-  and :doc:`Ubuntu Linux <setup/ubuntu>`.
+* **At Home, The Easy Way:** If you are interested in recreating the
+  environment we use in the CoderDojo lab, but for a single user, on
+  your own PC, you should consult our guide for :doc:`Vagrant
+  <setup/vagrant>`.
 
-* If you are responsible for running a lab server that hosts multiple
-  student instances during a Coder Dojo session, you should consult
-  the :doc:`Lab Server <setup/lab-server>` guide.
+* **At Home, The Hard Way:** If you are interested in installing all
+  the software needed to run these examples directly on your PC
+  (without using Vagrant to simplify the job), we currently have a
+  guide that covers doing so on :doc:`Windows <setup/windows>`. Users
+  of other platforms can consult this guide and try to adapt it for
+  their circumstances. Ultimately, we intend to also provide guides
+  for :doc:`Apple's OS X <setup/osx>` and :doc:`Ubuntu Linux
+  <setup/ubuntu>`.
 
 
 Tutorial
@@ -95,6 +94,15 @@ Reference Material
 
 The final section contains reference material and covers other random
 topics.
+
+* **Architecture Overview:** The :doc:`architecture overview
+  <reference/architecture>` explains the major components of the
+  environment we use for our exercises.
+
+* **Running A Lab Server:** If you are responsible for running a lab
+  server that hosts multiple student instances during a CoderDojo
+  session, you should consult the :doc:`Lab Server
+  <reference/lab-server>` guide.
 
 
 Copyright
