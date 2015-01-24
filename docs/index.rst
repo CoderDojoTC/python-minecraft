@@ -15,6 +15,35 @@ language. For example, in Scratch_.
 .. _Scratch: http://scratch.mit.edu/
 
 
+In the Classroom?
+=================
+
+Are you in the classroom right now? This section is for you!
+
+* **Today's class:**
+  :doc:`Overview <classroom/overview>`
+
+* **Setup:**
+  :doc:`First steps <classroom/setup>` |
+  :doc:`Connect to Wi-Fi <classroom/wifi>` |
+  :doc:`Connect to your Lab Instance <classroom/lab-instance>` |
+  :doc:`Test the instance <classroom/test>`
+
+* **Getting to work:**
+  :doc:`Exercises <classroom/exercises>` |
+  :doc:`Other scripts to explore <classroom/other-scripts>` |
+  :doc:`Doing your own thing <classroom/your-own-thing>`
+
+* **Reference material:**
+  :doc:`Controlling Minecraft from Python <classroom/mcpi>` |
+  :doc:`Playing Minecraft <classroom/player-controls>` |
+  :doc:`Other resources <classroom/resources>`
+
+* **Architecture Overview:** The :doc:`architecture overview
+  <reference/architecture>` explains the major components of the
+  environment we use for our exercises.
+
+
 Getting Help
 ============
 
@@ -38,15 +67,11 @@ Having trouble? Here are some pointers this might be useful:
 .. _ticket tracker: https://github.com/CoderDojoTC/python-minecraft/issues
 
 
-Setup
-=====
+Other Setups
+============
 
 Here are some instructions for setting up software to support
 different circumstances:
-
-* **In the Classroom:** During a CoderDojo event, we host a lab
-  environment so you can get started quickly. Read the guide to
-  :doc:`connect to the lab server <setup/lab-user>`.
 
 * **At Home, The Easy Way:** If you are interested in recreating the
   environment we use in the CoderDojo lab, but for a single user, on
@@ -61,43 +86,6 @@ different circumstances:
   their circumstances. Ultimately, we intend to also provide guides
   for :doc:`Apple's OS X <setup/osx>` and :doc:`Ubuntu Linux
   <setup/ubuntu>`.
-
-
-Tutorial
-========
-
-The next section helps you run your first script.
-
-.. toctree::
-   :maxdepth: 2
-
-   tutorial/index
-
-
-Existing Examples
-=================
-
-After you have enough experience to handle the basics, this section
-highlights some of the interesting scripts that are available in the
-python-minecraft_ repository.
-
-.. _python-minecraft: https://github.com/CoderDojoTC/python-minecraft
-
-.. toctree::
-   :maxdepth: 2
-
-   examples/index
-
-
-Reference Material
-==================
-
-The final section contains reference material and covers other random
-topics.
-
-* **Architecture Overview:** The :doc:`architecture overview
-  <reference/architecture>` explains the major components of the
-  environment we use for our exercises.
 
 * **Running A Lab Server:** If you are responsible for running a lab
   server that hosts multiple student instances during a CoderDojo

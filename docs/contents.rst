@@ -13,6 +13,7 @@ the :doc:`Overview Page <index>` to be more user-friendly.
 .. toctree::
     :maxdepth: 3
 
+    classroom/index
     setup/index
     tutorial/index
     examples/index
