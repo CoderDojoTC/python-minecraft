@@ -93,6 +93,21 @@ different circumstances:
   for :doc:`Apple's OS X <other-setups/osx>` and :doc:`Ubuntu Linux
   <other-setups/ubuntu>`.
 
+
+Mentors
+=======
+
+Mentors need docs too! Here they are:
+
+* **Core Mentor Guide:**
+  :doc:`Your first CoderDojo <mentors/>` |
+  :doc:`Being a mentor <mentors/>` |
+
+* **Project Maintenance:**
+  :doc:`Creating/updating documentation <mentors/>` |
+  :doc:`Creating/updating examples <mentors/>` |
+  :doc:`Running a lab server <mentors/>` |
+
 * **Running A Lab Server:** If you are responsible for running a lab
   server that hosts multiple student instances during a CoderDojo
   session, you should consult the :doc:`Lab Server
