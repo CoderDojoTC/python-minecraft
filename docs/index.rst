@@ -63,6 +63,9 @@ Having trouble? Here are some pointers this might be useful:
 * Our :doc:`glossary <glossary>` might define a term that is new to
   you.
 
+* If something seems different than the way it was before, consult the
+  :doc:`release notes <release-notes>` for more detail.
+
 * If something is still unclear, we really would like to know. Please
   visit our `ticket tracker`_ to let us know about the problem. Use
   the :guilabel:`New Issue` button.

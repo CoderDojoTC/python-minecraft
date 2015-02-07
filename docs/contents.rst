@@ -19,6 +19,7 @@ the :doc:`Overview Page <index>` to be more user-friendly.
     faq/index
     glossary
     todo
+    release-notes
 
 
 Indices and Tables
