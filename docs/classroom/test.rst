@@ -1,6 +1,6 @@
-=======================
- Testing Your Instance
-=======================
+===================
+ Testing the Setup
+===================
 
 A very basic test will show you whether the connection is working
 between the Minecraft server and the IPython notebook server.

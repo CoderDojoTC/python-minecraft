@@ -1,6 +1,6 @@
-=============
- Wi-Fi Setup
-=============
+==================
+ Connect to Wi-Fi
+==================
 
 The official documentation for connecting to the UMN campus Wi-Fi is
 available in the `WiFi Setup Guides`_. You should look at the section

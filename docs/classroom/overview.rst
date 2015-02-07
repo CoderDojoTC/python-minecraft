@@ -1,6 +1,6 @@
-================================================
- Build worlds in Minecraft with Python Overview
-================================================
+===========================
+ Overview of Today's Class
+===========================
 
 This section describes how we normally work in the CoderDojo classroom
 and what to expect in today's session.

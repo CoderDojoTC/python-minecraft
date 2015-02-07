@@ -1,6 +1,6 @@
-===========================
- Connect to a Lab Instance
-===========================
+==============================
+ Connect to Your Lab Instance
+==============================
 
 Once you are connected to :doc:`Wi-Fi <wifi>`, you need to turn your
 attention to connecting your PC the IPython Notebook and the Minecraft

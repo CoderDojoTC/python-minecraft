@@ -18,7 +18,10 @@ language. For example, in Scratch_.
 In the Classroom?
 =================
 
-Are you in the classroom right now? This section is for you!
+Are you in the classroom right now? This section is for you! Visit the
+first page linked below (hint: it reads *Overview*), read through the
+material, and then click through the link under the :guilabel:`Next
+topic` heading on each page to work through all the documentation.
 
 * **Today's class:**
   :doc:`Overview <classroom/overview>`
@@ -26,17 +29,17 @@ Are you in the classroom right now? This section is for you!
 * **Setup:**
   :doc:`First steps <classroom/setup>` |
   :doc:`Connect to Wi-Fi <classroom/wifi>` |
-  :doc:`Connect to your Lab Instance <classroom/lab-instance>` |
-  :doc:`Test the instance <classroom/test>`
+  :doc:`Connect to your lab instance <classroom/lab-instance>` |
+  :doc:`Test the setup <classroom/test>`
 
 * **Getting to work:**
-  :doc:`Exercises <classroom/exercises>` |
+  :doc:`Prepared exercises <classroom/exercises>` |
   :doc:`Other scripts to explore <classroom/other-scripts>` |
   :doc:`Doing your own thing <classroom/your-own-thing>`
 
 * **Reference material:**
   :doc:`Controlling Minecraft from Python <classroom/mcpi>` |
-  :doc:`Playing Minecraft <classroom/player-controls>` |
+  :doc:`Minecraft controls <classroom/player-controls>` |
   :doc:`Other resources <classroom/resources>`
 
 * **Architecture Overview:** The :doc:`architecture overview
@@ -76,16 +79,16 @@ different circumstances:
 * **At Home, The Easy Way:** If you are interested in recreating the
   environment we use in the CoderDojo lab, but for a single user, on
   your own PC, you should consult our guide for :doc:`Vagrant
-  <setup/vagrant>`.
+  <other-setups/vagrant>`.
 
 * **At Home, The Hard Way:** If you are interested in installing all
   the software needed to run these examples directly on your PC
   (without using Vagrant to simplify the job), we currently have a
-  guide that covers doing so on :doc:`Windows <setup/windows>`. Users
+  guide that covers doing so on :doc:`Windows <other-setups/windows>`. Users
   of other platforms can consult this guide and try to adapt it for
   their circumstances. Ultimately, we intend to also provide guides
-  for :doc:`Apple's OS X <setup/osx>` and :doc:`Ubuntu Linux
-  <setup/ubuntu>`.
+  for :doc:`Apple's OS X <other-setups/osx>` and :doc:`Ubuntu Linux
+  <other-setups/ubuntu>`.
 
 * **Running A Lab Server:** If you are responsible for running a lab
   server that hosts multiple student instances during a CoderDojo
