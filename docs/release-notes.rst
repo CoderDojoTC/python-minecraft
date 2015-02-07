@@ -12,6 +12,9 @@ time.
 * The table of contents and navigation between chapters has been
   improved. Some of the section index pages have been improved.
 
+* Improved the layout of the Lab Instance Connection card, and its
+  related documentation.
+
 * Some unnecessary documentation files have been removed.
 
 
