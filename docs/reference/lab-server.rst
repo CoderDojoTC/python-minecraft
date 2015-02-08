@@ -103,6 +103,7 @@ content like the following:
    instance_data_dir = /mnt
    docker_control_url = unix://var/run/docker.sock
    sourcecode_repo = https://github.com/CoderDojoTC/python-minecraft.git
+   docker_image = coderdojotc.org/python-minecraft-student:latest
 
 The ``spreadsheet`` value is the name of the Google Sheet that the LSC
 should use for its configuration data. The ``worksheet`` is the name
@@ -126,6 +127,8 @@ warning below for what to do instead.**
 	     to create an `application-specific password`_.  The
 	     password you set up on that page should be the one you
 	     enter in the config file.
+
+.. todo:: Need to document other values in config file above.
 
 .. _`2-factor authentication`: https://support.google.com/accounts/answer/180744?hl=en
 .. _`application-specific password`: https://accounts.google.com/b/0/IssuedAuthSubTokens?hl=en&hide_authsub=1

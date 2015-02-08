@@ -143,7 +143,7 @@ class Instance(object):
             # Create the container
             container = self.docker_api.create_container(
                 name=self.safe_name(),
-                image='coderdojotc.org/python-minecraft-student',
+                image=config.docker_image, #'coderdojotc.org/python-minecraft-student',
                 detach=True,
                 volumes=['/home/student/minecraft-lab'],
                 environment = {
