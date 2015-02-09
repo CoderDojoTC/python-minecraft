@@ -2,14 +2,14 @@
  Build Worlds in Minecraft with Python
 =======================================
 
-This documentation supports the `CoderDojo Twin Cities's`_ *Build
+This documentation supports the `CoderDojo Twin Cities'`_ *Build
 worlds in Minecraft with Python* code group. This group intends to
 teach you how to use Python_, a general purpose programming language,
 to mod the popular game called Minecraft_. It is targeted at students
 aged 10 to 17 who have some programming experience in another
 language. For example, in Scratch_.
 
-.. _CoderDojo Twin Cities's: http://www.coderdojotc.org/
+.. _CoderDojo Twin Cities': http://www.coderdojotc.org/
 .. _Python: https://www.python.org
 .. _Minecraft: https://minecraft.net/
 .. _Scratch: http://scratch.mit.edu/
@@ -52,6 +52,10 @@ Getting Help
 
 Having trouble? Here are some pointers this might be useful:
 
+* If you are reading an off-line version of our documentation, you
+  might want to refer to the `authoritative site`_. This site will
+  always have the latest and greatest material.
+
 * Take a look at the :doc:`FAQ <faq/index>`. We are loading this up
   with answers to common questions. Maybe the answer to your question
   is already here.
@@ -70,6 +74,7 @@ Having trouble? Here are some pointers this might be useful:
   visit our `ticket tracker`_ to let us know about the problem. Use
   the :guilabel:`New Issue` button.
 
+.. _authoritative site: http://coderdojotc.readthedocs.org/projects/python-minecraft/en/latest/
 .. _ticket tracker: https://github.com/CoderDojoTC/python-minecraft/issues
 
 
@@ -93,10 +98,20 @@ different circumstances:
   for :doc:`Apple's OS X <other-setups/osx>` and :doc:`Ubuntu Linux
   <other-setups/ubuntu>`.
 
-* **Running A Lab Server:** If you are responsible for running a lab
-  server that hosts multiple student instances during a CoderDojo
-  session, you should consult the :doc:`Lab Server
-  <reference/lab-server>` guide.
+
+Mentors
+=======
+
+Mentors need docs too! Here they are:
+
+* **Core Mentor Guide:**
+  :doc:`Being a CoderDojo mentor <mentors/general>` |
+  :doc:`Being a Python Minecraft mentor <mentors/python-minecraft>`
+
+* **Python Minecraft Project Technology:**
+  :doc:`Project technology <mentors/project-technology>` |
+  :doc:`Project maintenance <mentors/maintenance>` |
+  :doc:`Running a lab server <mentors/lab-server>`
 
 
 Copyright

@@ -21,3 +21,11 @@ How do I...
 
    To create a new world, you need to ...
 
+Why is...
+=========
+
+... my network connection so slow?
+
+   You might have connected via Wi-Fi to ``UofM Guest`` instead of
+   ``UofM Secure``. The ``Guest`` network has much less bandwidth, and
+   is too slow for most useful work.
