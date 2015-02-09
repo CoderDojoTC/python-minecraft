@@ -52,6 +52,10 @@ Getting Help
 
 Having trouble? Here are some pointers this might be useful:
 
+* If you are reading an off-line version of our documentation, you
+  might want to refer to the `authoritative site`_. This site will
+  always have the latest and greatest material.
+
 * Take a look at the :doc:`FAQ <faq/index>`. We are loading this up
   with answers to common questions. Maybe the answer to your question
   is already here.
@@ -70,6 +74,7 @@ Having trouble? Here are some pointers this might be useful:
   visit our `ticket tracker`_ to let us know about the problem. Use
   the :guilabel:`New Issue` button.
 
+.. _authoritative site: http://coderdojotc.readthedocs.org/projects/python-minecraft/en/latest/
 .. _ticket tracker: https://github.com/CoderDojoTC/python-minecraft/issues
 
 
@@ -100,10 +105,11 @@ Mentors
 Mentors need docs too! Here they are:
 
 * **Core Mentor Guide:**
-  :doc:`Your first CoderDojo <mentors/>` |
-  :doc:`Being a mentor <mentors/>` |
+  :doc:`Being a CoderDojo mentor <mentors/general>` |
+  :doc:`Being a Python Minecraft mentor <mentors/python-minecraft>`
 
-* **Project Maintenance:**
+* **Python Minecraft Project Maintenance:**
+  :doc:`Project technology <mentors/technical-overview>` |
   :doc:`Creating/updating documentation <mentors/>` |
   :doc:`Creating/updating examples <mentors/>` |
   :doc:`Running a lab server <mentors/>` |
@@ -112,6 +118,8 @@ Mentors need docs too! Here they are:
   server that hosts multiple student instances during a CoderDojo
   session, you should consult the :doc:`Lab Server
   <reference/lab-server>` guide.
+
+* **Mentor
 
 
 Copyright
