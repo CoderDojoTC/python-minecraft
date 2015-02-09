@@ -15,6 +15,7 @@ the :doc:`Overview Page <index>` to be more user-friendly.
 
     classroom/index
     other-setups/index
+    mentors/index
     reference/index
     faq/index
     glossary

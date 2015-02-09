@@ -1,8 +1,15 @@
-==================================
- Lessons/Thoughts from 2015-01-24
-==================================
+=================
+ Lessons Learned
+=================
 
-The WiFi setup on namebadges was much easier to manage than trying to
+We are attempting to capture lessons learned in the course of
+conducting the classroom sessions over time.
+
+
+Lessons/Thoughts from 2015-01-24
+================================
+
+The WiFi setup on name-badges was much easier to manage than trying to
 cross credentials off lists. It did take a little more coordination to
 get WiFi set up on Dojo-provided PCs. We had to line up the badges on
 the appropriate PCs, and then log them in.

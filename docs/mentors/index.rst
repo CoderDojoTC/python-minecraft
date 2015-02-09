@@ -16,14 +16,24 @@ Next, review the core overview for mentors:
 
    general
    python-minecraft
+   lessons-learned
 
 After reviewing the material above, you are probably well ready to be
 a mentor at a Dojo event. We look forward to seeing you there!
 
+If you are hosting the technology used for a session, you should
+consult these guides:
+
+.. toctree::
+   :maxdepth: 1
+
+   lab-server
+
 The following documentation covers various kinds of project
-maintenance:
+technology, maintenance, and other tasks:
 
 .. toctree::
    :maxdepth: 1
 
    project-technology
+   maintenance

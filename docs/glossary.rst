@@ -8,7 +8,7 @@
 
    code group
       Code groups are topics in the Twin Cities' CoderDojo. When
-      students sign up to addend, they indicate interest in three
+      students sign up to attend, they indicate interest in three
       different code groups. They get assigned to a specific code
       group once the number of mentors is known. This usually happens
       a couple of days before the event.
