@@ -3,7 +3,19 @@
 ===============
 
 The following changes have been made to the classroom materials over
-time.
+time. Look for annotated Git tags that match the headings below.
+
+
+Latest (untagged release)
+=========================
+
+* The Lab Server Controller now accepts the name of a docker image
+  (and version tags) in its configuration file. This makes it possible
+  to use different lab images in different environments, which is
+  particularly useful in testing a new image before committing to
+  using it for a specific CoderDojo event.
+
+* Lots of documentation updates, including new docs for Mentors.
 
 
 2015-02-07
