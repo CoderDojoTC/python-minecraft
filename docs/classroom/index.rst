@@ -4,9 +4,8 @@
 
 The section contains documentation useful for participants in a
 CoderDojo classroom event. Visit each of the links below to find the
-documentation needed to work through get set up and then work through
-the classroom exercises of the *Build worlds in Minecraft with Python*
-session.
+documentation needed to get set up and then work through the classroom
+exercises of the *Build worlds in Minecraft with Python* code group.
 
 First, we start with an overview:
 

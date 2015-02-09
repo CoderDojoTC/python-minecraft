@@ -2,6 +2,15 @@
  Connect to Wi-Fi
 ==================
 
+The username and password needed you need to connect to the campus
+Wi-Fi is printed on the name badge passed out to each student and
+mentor. These credentials are only good for the day of the session, so
+if you have credentials saved on your computer from a prior session,
+you will need to delete them and use the ones on your name
+badge. These credentials are good for a single device (e.g., one
+laptop). If you need an extra set of credentials for additional
+devices, check with one of the mentors.
+
 The official documentation for connecting to the UMN campus Wi-Fi is
 available in the `WiFi Setup Guides`_. You should look at the section
 for your specific operating system under the heading *UoM Secure*.
@@ -11,7 +20,9 @@ for your specific operating system under the heading *UoM Secure*.
 That said, you might be able to muddle through setting up a connection
 using only the key bits of information below:
 
-* Connect to the ``UofM Secure`` SSID.
+* Connect to the ``UofM Secure`` SSID. Other networks might seem to
+  work (e.g., ``UofM Guest``), but they are bandwidth-restricted. You
+  will have Internet connectivity, but will be terribly slow.
 
 * Choose ``WPA2-Enterprise`` security.
 
