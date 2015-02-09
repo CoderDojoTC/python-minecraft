@@ -2,14 +2,14 @@
  Build Worlds in Minecraft with Python
 =======================================
 
-This documentation supports the `CoderDojo Twin Cities's`_ *Build
+This documentation supports the `CoderDojo Twin Cities'`_ *Build
 worlds in Minecraft with Python* code group. This group intends to
 teach you how to use Python_, a general purpose programming language,
 to mod the popular game called Minecraft_. It is targeted at students
 aged 10 to 17 who have some programming experience in another
 language. For example, in Scratch_.
 
-.. _CoderDojo Twin Cities's: http://www.coderdojotc.org/
+.. _CoderDojo Twin Cities': http://www.coderdojotc.org/
 .. _Python: https://www.python.org
 .. _Minecraft: https://minecraft.net/
 .. _Scratch: http://scratch.mit.edu/
@@ -108,18 +108,10 @@ Mentors need docs too! Here they are:
   :doc:`Being a CoderDojo mentor <mentors/general>` |
   :doc:`Being a Python Minecraft mentor <mentors/python-minecraft>`
 
-* **Python Minecraft Project Maintenance:**
-  :doc:`Project technology <mentors/technical-overview>` |
-  :doc:`Creating/updating documentation <mentors/>` |
-  :doc:`Creating/updating examples <mentors/>` |
-  :doc:`Running a lab server <mentors/>` |
-
-* **Running A Lab Server:** If you are responsible for running a lab
-  server that hosts multiple student instances during a CoderDojo
-  session, you should consult the :doc:`Lab Server
-  <reference/lab-server>` guide.
-
-* **Mentor
+* **Python Minecraft Project Technology:**
+  :doc:`Project technology <mentors/project-technology>` |
+  :doc:`Project maintenance <mentors/maintenance>` |
+  :doc:`Running a lab server <mentors/lab-server>`
 
 
 Copyright

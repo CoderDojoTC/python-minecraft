@@ -2,8 +2,13 @@
  The Lab Server
 ================
 
-This is a pretty cursory explanation for how to setup a lab server
-from scratch, and then how to operate it during a CoderDojo session.
+If you are responsible for running a lab server that hosts multiple
+student instances during a CoderDojo session, this is the guide for
+you.
+
+This is currently a pretty cursory explanation for how to setup a lab
+server from scratch, and then how to operate it during a CoderDojo
+session.
 
 .. todo:: Need to elaborate on AWS usage, such as how to create an
           instance, pick the size and availability zone, configure the
