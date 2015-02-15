@@ -46,5 +46,6 @@ nosetests.xml
 # jetbrains/pycharm
 .idea
 
-*/.vagrant
+**/.vagrant
 docs/_build/*
+**/private_config.yaml
