@@ -1,0 +1,32 @@
+---
+# This file is used to configure the environment that Vagrant sets up
+# when you launch a local lab environment. To make use of this, open
+# the file named "sample_config.yaml", save it to a new file named
+# "private_config.yaml", and make the necessary edits. Read the
+# documentation linked below for more support.
+#
+# http://python-minecraft.readthedocs.org/en/latest/other-setups/vagrant.html
+
+# Set your Minecraft player name in the field below. Failure to do
+# this will allow you to connect to the server, but you will not be
+# able to place or destroy blocks. Note, this is your player name, not
+# your email address.
+mojang_account: 'YOUR_PLAYER_NAME'
+
+# Set an IPython password in the field below. IPython will ask you for
+# this password when you connect.
+ipython_password: 'fooBARbaz'
+
+
+#### ADVANCED SETTINGS. You probably don't need to modify anything
+#### other than the settings above.
+
+# Specify the name of the Docker image to launch for the
+# environment. The value below always uses the latest published image
+# on the Docker Hub.
+image_name: 'coderdojotc/python-minecraft-student:latest'
+
+# Specify the name of the Git repository to clone into the
+# environment. If no repository is specified, the current directory is
+# assumed to be a repository, and it will be used instead.
+coderdojo_source_code: 'https://github.com/CoderDojoTC/python-minecraft.git'
