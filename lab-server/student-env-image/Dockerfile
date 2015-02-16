@@ -29,6 +29,9 @@ RUN apt-get update \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
+# Upgrade IPython to get improved usability of the Notebook server
+RUN pip install --upgrade ipython==2.4.0
+
 
 # ----------------------------------------------------------------------------
 # Minor configurations
