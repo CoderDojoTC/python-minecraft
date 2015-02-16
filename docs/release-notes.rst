@@ -9,6 +9,11 @@ time. Look for annotated Git tags that match the headings below.
 Latest (untagged release)
 =========================
 
+* The docs for setting up a local, Vagrant-based lab environment have
+  been updated to work much better. It now uses exactly the same
+  environment and setup that students get when attending a CoderDojoTC
+  event. The solo-server docs and files have been removed.
+
 * The Lab Server Controller now accepts the name of a docker image
   (and version tags) in its configuration file. This makes it possible
   to use different lab images in different environments, which is
