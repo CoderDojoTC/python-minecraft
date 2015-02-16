@@ -68,11 +68,11 @@ COPY default-canary-files/ /usr/local/share/default-canary-files/
 
 # Get a copy of the RaspberryJuice plugin from GitHub
 
-ADD https://github.com/martinohanlon/CanaryRaspberryJuice/blob/master/jars/canaryraspberryjuice-1.0.2.jar?raw=true /usr/local/share/default-canary-files/plugins/
+ADD https://github.com/martinohanlon/CanaryRaspberryJuice/blob/master/jars/canaryraspberryjuice-1.2.jar?raw=true /usr/local/share/default-canary-files/plugins/
 
 # Download the Canary jar file
 
-ADD https://ci.visualillusionsent.net/job/CanaryMod/624/artifact/target/CanaryMod-1.7.10-1.1.3-SNAPSHOT-shaded.jar /usr/local/bin/
+ADD https://ci.visualillusionsent.net/job/CanaryMod/631/artifact/target/CanaryMod-1.7.10-1.1.3-shaded.jar /usr/local/bin/
 
 
 # ----------------------------------------------------------------------------
