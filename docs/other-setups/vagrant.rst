@@ -31,8 +31,8 @@ These steps outline the tasks you need to perform to be able to use
 our Vagrant-based lab environment.
 
 
-Install Vagrant
----------------
+Step 1: Install Vagrant
+-----------------------
 
 Vagrant is free, open source software from HashiCorp that helps
 recreate development environments from a simple set of instructions
@@ -63,8 +63,8 @@ It should print output similar to the following::
   You're running an up-to-date version of Vagrant!
 
 
-Install VirtualBox
-------------------
+Step 2: Install VirtualBox
+--------------------------
 
 VirtualBox is used by Vagrant to host virtual machines that contain
 all the pieces of our development environment. A virtual machine is a
@@ -93,8 +93,8 @@ It should print output similar to the following::
   4.3.20r96996
 
 
-Get a Copy of the python-minecraft Repository
----------------------------------------------
+Step 3: Get a Copy of the python-minecraft Repository
+-----------------------------------------------------
 
 The files we use in our CoderDojo workshops are stored on
 GitHub. GitHub is organized into *repositories*, and the
@@ -104,8 +104,8 @@ environment.
 .. _python-minecraft repository: https://github.com/CoderDojoTC/python-minecraft/
 
 The simplest way to get a copy of these files is to download `the Zip
-file` with all the files from the project. Decompress this file into a
-place where you can work on the files, such as a folder under your
+file`_ with all the files from the project. Decompress this file into
+a place where you can work on the files, such as a folder under your
 :file:`My Documents` folder on Windows, or your home folder on
 OS X. We will refer to this location as your **working directory**.
 
@@ -136,117 +136,85 @@ follows::
   cd python-minecraft
 
 
-To create the virtual machine containing the lab environment
-------------------------------------------------------------
+To start your lab environment
+-----------------------------
 
-Change into the :file:`solo-server` directory with the :command:`cd`
-command, and start up the environment using the :command:`vagrant up`
-command. An example of how this looks on an Ubuntu PC is as follows:
+The first step is to configure a file in your :file:`python-minecraft`
+folder called :file:`private_config.yaml`. The easiest way to do this
+is to open the file named :file:`sample_config.yaml` in a :term:`text
+editor` and use the equivalent of :menuselection:`File --> Save As` to
+create a copy with the name :file:`private_config.yaml`. Once you've
+saved a copy to the new filename, you must edit it to place your
+Mojang account name in the appropriate place. You might also want to
+replace the default IPython password.
+
+Once the configuration file is in place, start up the environment
+using the :command:`vagrant up` command with the argument
+:option:`--provider=docker`. Together, the two will read ``vagrant
+up --provider=docker``. An example of how this looks on an Ubuntu PC
+is as follows:
 
 .. sourcecode:: shell-session
 
-   [user@pc:~/python-minecraft]$ cd solo-server/
-   [user@pc:~/python-minecraft/solo-server]$ vagrant up
-   Bringing machine 'default' up with 'virtualbox' provider...
-   ==> default: Checking if box 'ubuntu/trusty64' is up to date...
-   ==> default: Clearing any previously set forwarded ports...
-   ==> default: Clearing any previously set network interfaces...
-   [ ... snip ... ]
-   ==> default: Congratulations! You now have a Vagrant box that is ready to use for
-   ==> default: the CoderDojo exercises!
-   ==> default:
-   ==> default: First, start the servers in the environment by running the following
-   ==> default: command:
-   ==> default:
-   ==> default:     vagrant ssh -c start-env.sh
-   ==> default:
-   ==> default: Next, start the Minecraft came on your PC. Make a profile that is
-   ==> default: compatible with version 1.7.10, and connect to a multiplayer game on
-   ==> default: "localhost".
-   ==> default:
-   ==> default: Finally, start your web browser on your PC and visit the following
-   ==> default: URL:
-   ==> default:
-   ==> default:     https://localhost:8888/
-   ==> default:
-   ==> default: The password to connect to IPython is:
-   ==> default:     Gewapedy
-
-.. warning:: Make note of the password that is printed in the last
-	     line of the output above. You will need it to access the
-	     IPython environment. It will stay the same until you
-	     :command:`vagrant destroy` the environment (see below).
+   [user@pc:~/python-minecraft]$ vagrant up --provider=docker
+   Bringing machine 'default' up with 'docker' provider...
+   ==> default: Creating the container...
+       default:   Name: python-minecraft_default_1424041630
+       default:  Image: coderdojotc/python-minecraft-student:latest
+       default: Volume: /home/user/python-minecraft:/vagrant
+       default:   Port: 10443:8888
+       default:   Port: 10565:25565
+       default:  
+       default: Container created: 76984c0ca81b1fd8
+   ==> default: Starting container...
+   ==> default: Provisioners will not be run since container doesn't support SSH.
 
 .. note:: The first time you execute the :command:`vagrant up` command
-          on a PC might take a long time (tens of minutes, or maybe
-          even an hour). Vagrant will go out to the Internet to
-          download the software that forms the foundation of the
-          environment. One big portion of this is referred to as the
-          Vagrant *box*, which is several hundreds megabytes in
-          size. Thankfully, this only happens once, as Vagrant saves
-          the box file to reuse later.
+          on a PC might take a long time, depending on the speed of
+          the computer and the speed of your connection to the
+          Internet. It could take tens of minutes, or maybe even an
+          hour.
+
+	  Vagrant downloads software from the Internet to create the
+          lab server environment. Most of this software is saved on
+          your computer, so it should be faster when you start it a
+          second time.
+
+After running the above command, you can pick up with the instructions
+in :doc:`../classroom/lab-instance`. Since you are running this on
+your own PC, you won't have a :term:`lab instance connection
+card`. Instead, check the table below for the necessary information:
+
++---------------+------------------------------------------------------------+
+| Information   | Description                                                |
++===============+============================================================+
+| Server Name   | In the classroom documentation, wherever it says           |
+|               | ``python.coderdojotc.org``, use ``localhost`` instead. The |
+|               | name ``localhost`` refers to your PC itself.               |
++---------------+------------------------------------------------------------+
+| IPython URL   | For your local environment, your IPython URL is            |
+|               | ``https://localhost:10443/``.                              |
++---------------+------------------------------------------------------------+
+| IPython       | This is the value you placed in your                       |
+| Password      | :file:`private_config.yaml` file. It defaults to           |
+|               | ``fooBARbaz``.                                             |
++---------------+------------------------------------------------------------+
+| Mojang        | This is the value you placed in your                       |
+| Account Name  | :file:`private_config.yaml` file. It should be something   |
+|               | like ``coderdojotc01``. It is **not** your email address.  |
++---------------+------------------------------------------------------------+
+| Mojang        | For your local environment, this is the value              |
+| Server        | ``localhost:10565``.                                       |
+| Address       |                                                            |
++---------------+------------------------------------------------------------+
 
 
-To start up the lab environment
--------------------------------
+Destroy the virtual machine
+---------------------------
 
-You can run commands inside the vagrant environment using the
-:command:`vagrant ssh` command. We use this command to run scripts
-(small programs) in the environment that do useful work.
-
-To start up the servers in our lab environment, use the
-:command:`vagrant ssh -c start-env.sh` command as illustrated below:
-
-.. sourcecode:: shell-session
-
-   [user@pc:~/python-minecraft/solo-server]$ vagrant ssh -c start-env.sh
-   grep: /home/vagrant/minecraft_lab/run/eula.txt: No such file or directory
-   Please wait while the libraries initialize...
-   Starting: CanaryMod 1.7.10-1.1.2
-   Canary Path: /home/vagrant/minecraft_lab/bin/CanaryMod-1.7.10-1.1.2.jar & Working From: /home/vagrant/minecraft_lab/run
-   Could not find the server configuration at config/server.cfg, creating default.
-   Could not find the database configuration at config/db.cfg, creating default.
-   Registered xml Database
-   Could not find config/ops.cfg. Creating one for you...
-   You can now add ops to config/ops.cfg (one per line!). We left you a note.
-   Found 1 plugins; total: 1
-   [07:14:33] [CanaryMod] [INFO]: Starting: CanaryMod 1.7.10-1.1.2
-   [07:14:33] [CanaryMod] [INFO]: Canary Path: /home/vagrant/minecraft_lab/bin/CanaryMod-1.7.10-1.1.2.jar & Working From: /home/vagrant/minecraft_lab/run
-   [07:14:33] [CanaryMod] [INFO]: Could not find the server configuration at config/server.cfg, creating default.
-   [07:14:33] [CanaryMod] [INFO]: Could not find the database configuration at config/db.cfg, creating default.
-   [07:14:34] [CanaryMod] [INFO]: Registered xml Database
-   [07:14:34] [CanaryMod] [INFO]: Could not find config/ops.cfg. Creating one for you...
-   [07:14:34] [CanaryMod] [INFO]: You can now add ops to config/ops.cfg (one per line!). We left you a note.
-   [07:14:34] [CanaryMod] [INFO]: Found 1 plugins; total: 1
-   [07:14:34] [net.minecraft.server.dedicated.DedicatedServer] [INFO]: Starting minecraft server version 1.7.10
-   [07:14:34] [net.minecraft.server.dedicated.DedicatedServer] [INFO]: Loading properties
-   [07:14:34] [net.minecraft.server.ServerEula] [WARN]: Failed to load eula.txt
-   [07:14:34] [net.minecraft.server.dedicated.DedicatedServer] [INFO]: You need to agree to the EULA in order to run the server. Go to eula.txt for more info.
-   [07:14:34] [net.minecraft.server.MinecraftServer] [INFO]: Stopping server
-   [07:14:34] [net.minecraft.server.MinecraftServer] [INFO]: Saving worlds
-   [07:14:34] [CanaryMod] [INFO]: Disabling Plugins ...
-   > [07:14:34] [net.minecraft.server.MinecraftServer] [INFO]: Stopping server
-   [07:14:34] [net.minecraft.server.MinecraftServer] [INFO]: Saving worlds
-   [07:14:34] [CanaryMod] [INFO]: Disabling Plugins ...
-   Environment started. Use 'attach-env.sh' to connect to the controlling
-   terminals. Use 'stop-env.sh' to halt the environment.
-   Connection to 127.0.0.1 closed.
-
-Once you have started the virual machine, you can connect to the
-IPython notebook server by visiting https://localhost:8888 using your
-web browser. You can connect to the Minecraft world running in the
-environment by connecting to a server at localhost:25565.
-
-To attach to the console of the CanaryMod server (for example, to make
-another player an Op in the world so they can change it), use the
-:command:`vagrant ssh -c attach-env.sh` command. You can disconnect
-from the console by typing :kbd:`Ctrl-b d`.
-
-.. todo:: Describe more about how to use the console.
-
-
-Destroy the virual machine
---------------------------
+To temporarily stop the lab environment, use the :command:`vagrant
+halt` command. You can restart the environment later with the
+:command:`vagrant up` command.
 
 To shut down the lab environment, permanently releasing the memory and
 hard drive space it is using, you use the :command:`vagrant destroy`
@@ -254,11 +222,10 @@ command:
 
 .. sourcecode:: shell-session
 
-   [user@pc:~/python-minecraft/solo-server]$ vagrant destroy
+   [user@pc:~/python-minecraft]$ vagrant destroy
        default: Are you sure you want to destroy the 'default' VM? [y/N] y
-   ==> default: Forcing shutdown of VM...
-   ==> default: Destroying VM and associated drives...
-   ==> default: Running cleanup tasks for 'shell' provisioner...
+   ==> default: Stopping container...
+   ==> default: Deleting the container...
 
 Any servers you were running will be stopped and your Minecraft world
 will be lost. The files you edited in your working directory will

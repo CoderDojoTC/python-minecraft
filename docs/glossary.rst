@@ -29,3 +29,15 @@
       A piece of paper that has the address of your private Minecraft
       server, the address of your private IPython notebook server, and
       the password needed to connect to it.
+
+   text editor
+      A text editor is a program that is lets a user edit plain text
+      files. Most programs are stored in plain text files, so computer
+      programmers often use text editors to create and change these
+      files.
+
+      On a Windows PC, the text editor that comes with the Windows
+      itself is called :command:`Notepad`. On a many versions of
+      Linux, a program named :command:`gedit` is often installed. On
+      Mac OS X, the text editor is commonly called
+      :command:`TextEdit`.
