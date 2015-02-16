@@ -1,7 +1,7 @@
 # Builds the python-minecraft-student Docker image. Each student will
 # get their own container built from this image.
 
-FROM ubuntu:14.04
+FROM phusion/baseimage:0.9.16
 MAINTAINER Mike McCallister <mike@mccllstr.com>
 
 # ----------------------------------------------------------------------------
@@ -10,7 +10,7 @@ MAINTAINER Mike McCallister <mike@mccllstr.com>
 # advantage of its cache, which greatly speeds up subsequent builds.
 
 RUN apt-get update \
-    && apt-get install -y \
+    && apt-get install --no-install-recommends --no-install-suggests -y \
         apg \
         curl \
         git-core \
@@ -20,12 +20,14 @@ RUN apt-get update \
         openssl \
         psmisc \
         python-imaging \
+        python-pip \
         python-pygame \
         supervisor \
         tmux \
         unzip \
         zip \
-    && apt-get clean
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 
 # ----------------------------------------------------------------------------
