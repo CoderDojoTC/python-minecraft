@@ -9,6 +9,11 @@ time. Look for annotated Git tags that match the headings below.
 Latest (untagged release)
 =========================
 
+* Upgraded to CanaryRaspberryJuice version 1.2. This added methods
+  such as getPlayerId(playerName), getDirection(), getRotation(), and
+  getPitch(). This also includes version 1.1, which added various
+  entity methods.
+
 * The docs for setting up a local, Vagrant-based lab environment have
   been updated to work much better. It now uses exactly the same
   environment and setup that students get when attending a CoderDojoTC
