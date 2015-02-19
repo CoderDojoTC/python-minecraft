@@ -51,6 +51,7 @@ tmux send-keys -t ${SESSION_NAME} 'gamerule doMobSpawning false' C-m
 tmux send-keys -t ${SESSION_NAME} 'gamerule doDaylightCycle false' C-m
 tmux send-keys -t ${SESSION_NAME} 'time set 1000' C-m
 tmux send-keys -t ${SESSION_NAME} 'defaultgamemode 1' C-m
+tmux send-keys -t ${SESSION_NAME} 'weather clear 1000000' C-m
 
 # Check for receipt of signals indicating we should exit. Send the
 # 'stop' command to Canary if we get one.

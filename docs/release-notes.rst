@@ -9,6 +9,11 @@ time. Look for annotated Git tags that match the headings below.
 Latest (untagged release)
 =========================
 
+* Simplify the generated world in the student lab instance to make it
+  better for programming projects. Now, the students are placed in a
+  "FLAT" world (no terrain, no biomes, no structures, no mobs, etc.),
+  and the weather is clear.
+
 * Upgraded to CanaryRaspberryJuice version 1.2. This added methods
   such as getPlayerId(playerName), getDirection(), getRotation(), and
   getPitch(). This also includes version 1.1, which added various
