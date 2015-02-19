@@ -15,7 +15,16 @@ from util import flatten
     (Because of this, it's possible to "erase" arguments. CmdPlayer removes
      entityId, by injecting [] that flattens to nothing)
 
-    @author: Aron Nieminen, Mojang AB"""
+    @author: Aron Nieminen, Mojang AB
+    
+    Updated to included additional functionality provided by RaspberryJuice:
+    - getBlocks() : implemented
+    - .create() : can now accept "name" (player name) for use in multiplayer
+    - CmdPositioner.getDirection
+    - CmdPositioner.getPitch
+    - CmdPositioner.getRotation
+    - getPlayerEntityId
+    """
 
 
 def intFloor(*args):
@@ -45,6 +54,19 @@ class CmdPositioner:
         """Set entity tile position (entityId:int) => Vec3"""
         self.conn.send(self.pkg + ".setTile", id, intFloor(*args))
 
+    def getDirection(self, id):
+        """Get entity direction (entityId:int) => Vec3"""
+        s = self.conn.sendReceive(self.pkg + ".getDirection", id)
+        return Vec3(*map(float, s.split(",")))
+
+    def getRotation(self, id):
+        """get entity rotation (entityId:int) => float"""
+        return float(self.conn.sendReceive(self.pkg + ".getRotation", id))
+
+    def getPitch(self, id):
+        """get entity pitch (entityId:int) => float"""
+        return float(self.conn.sendReceive(self.pkg + ".getPitch", id))
+
     def setting(self, setting, status):
         """Set a player setting (setting, status). keys: autojump"""
         self.conn.send(self.pkg + ".setting", setting, 1 if bool(status) else 0)
@@ -58,18 +80,25 @@ class CmdEntity(CmdPositioner):
 
 class CmdPlayer(CmdPositioner):
     """Methods for the host (Raspberry Pi) player"""
-    def __init__(self, connection):
+    def __init__(self, connection, name=None):
         CmdPositioner.__init__(self, connection, "player")
         self.conn = connection
+        self.name = name
 
     def getPos(self):
-        return CmdPositioner.getPos(self, [])
+        return CmdPositioner.getPos(self, self.name)
     def setPos(self, *args):
-        return CmdPositioner.setPos(self, [], args)
+        return CmdPositioner.setPos(self, self.name, args)
     def getTilePos(self):
-        return CmdPositioner.getTilePos(self, [])
+        return CmdPositioner.getTilePos(self, self.name)
     def setTilePos(self, *args):
-        return CmdPositioner.setTilePos(self, [], args)
+        return CmdPositioner.setTilePos(self, self.name, args)
+    def getDirection(self):
+        return CmdPositioner.getDirection(self, self.name)
+    def getRotation(self):
+        return CmdPositioner.getRotation(self, self.name)
+    def getPitch(self):
+        return CmdPositioner.getPitch(self, self.name)
 
 class CmdCamera:
     def __init__(self, connection):
@@ -110,12 +139,12 @@ class CmdEvents:
 
 class Minecraft:
     """The main class to interact with a running instance of Minecraft Pi."""
-    def __init__(self, connection):
+    def __init__(self, connection, name=None):
         self.conn = connection
 
         self.camera = CmdCamera(connection)
         self.entity = CmdEntity(connection)
-        self.player = CmdPlayer(connection)
+        self.player = CmdPlayer(connection, name)
         self.events = CmdEvents(connection)
 
     def getBlock(self, *args):
@@ -131,7 +160,8 @@ class Minecraft:
     """
     def getBlocks(self, *args):
         """Get a cuboid of blocks (x0,y0,z0,x1,y1,z1) => [id:int]"""
-        return int(self.conn.sendReceive("world.getBlocks", intFloor(args)))
+        s = self.conn.sendReceive("world.getBlocks", intFloor(args))
+        return map(int, s.split(","))
 
     def setBlock(self, *args):
         """Set block (x,y,z,id,[data])"""
@@ -150,6 +180,10 @@ class Minecraft:
         ids = self.conn.sendReceive("world.getPlayerIds")
         return map(int, ids.split("|"))
 
+    def getPlayerEntityId(self, name):
+        """Get the entity id of the named player => [id:int]"""
+        return int(self.conn.sendReceive("world.getPlayerId", name))
+
     def saveCheckpoint(self):
         """Save a checkpoint that can be used for restoring the world"""
         self.conn.send("world.checkpoint.save")
@@ -167,8 +201,8 @@ class Minecraft:
         self.conn.send("world.setting", setting, 1 if bool(status) else 0)
 
     @staticmethod
-    def create(address = "localhost", port = 4711):
-        return Minecraft(Connection(address, port))
+    def create(address = "localhost", port = 4711, name = None):
+        return Minecraft(Connection(address, port), name)
 
 
 if __name__ == "__main__":
