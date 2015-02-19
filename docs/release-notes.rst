@@ -19,6 +19,12 @@ Latest (untagged release)
   getPitch(). This also includes version 1.1, which added various
   entity methods.
 
+* Upgraded to IPython version 2.4 in the student lab server
+  instance. This is a significant upgrade from the prior version,
+  which was IPython 1.3. The main student-visible differences are that
+  IPython can now navigate between directories, and the Notebook
+  web UI now has separate Edit and Command modes.
+
 * The docs for setting up a local, Vagrant-based lab environment have
   been updated to work much better. It now uses exactly the same
   environment and setup that students get when attending a CoderDojoTC
