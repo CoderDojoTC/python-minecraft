@@ -19,7 +19,18 @@ How do I...
 
 ... create a new world?
 
-   To create a new world, you need to ...
+   To create a new world, you need to use the :command:`/createworld
+   WORLDNAME` to create a world named *WORLDNAME*. Then use the
+   command :command:`/spawn WORLDNAME` to switch to that world. To
+   create and joing a world named ``Mine``, you would use the
+   following two commands::
+
+     /createworld Mine
+     /spawn Mine
+
+   The world you are in when the game starts it called ``default``. To
+   return to it, you would use the command :command:`/spawn default`.
+
 
 Why is...
 =========
