@@ -14,6 +14,10 @@ Latest (untagged release)
   "FLAT" world (no terrain, no biomes, no structures, no mobs, etc.),
   and the weather is clear.
 
+* Reorganized the exercises and examples into subfolders, and
+  converted all the previous :file:`*.py` files into :file:`*.ipynb`
+  files so students can load them directly in IPython.
+
 * Upgraded to CanaryRaspberryJuice version 1.2. This added methods
   such as getPlayerId(playerName), getDirection(), getRotation(), and
   getPitch(). This also includes version 1.1, which added various
@@ -37,6 +41,22 @@ Latest (untagged release)
   using it for a specific CoderDojo event.
 
 * Lots of documentation updates, including new docs for Mentors.
+
+* For people working on updating exercise or example code through the
+  IPython notebook interface, launching a student lab instance with
+  Vagrant will now copy the local working directory into the folder
+  where IPython can edit the files. If there is no Vagrant-provided
+  folder, the code will be retrieved from the Git repository specified
+  in the :file:`private_config.yaml` file.
+
+  By itself, this copy from Vagrant into the IPython notebook folder
+  is a one-way-street. Edits made there will not be visible on the
+  Vagrant host (where they can be committed to source code
+  control). However, there is also a script installed in the image
+  called :command:`sync-notebooks.sh`. It can be run as follows from
+  the Vagrant host, and it will invoke Unison to sync up the changes::
+
+    docker exec -it python-minecraft_default_1424407654 sync-notebooks.sh
 
 
 2015-02-07
