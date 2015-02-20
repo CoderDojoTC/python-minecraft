@@ -5,9 +5,12 @@
 A very basic test will show you whether the connection is working
 between the Minecraft server and the IPython notebook server.
 
-#. In IPython, click on :guilabel:`Exercise 1 – Hello World!` to open
-   the notebook for the first exercise. Your screen should look
-   roughly like the following:
+#. In IPython, click on the :guilabel:`exercises` folder to navigate
+   to where the classroom exercises are stored.
+
+#. Click on :guilabel:`Exercise 1 -- Hello World!` to open the
+   notebook for the first exercise. Your screen should look roughly
+   like the following:
 
    .. image:: _images/hello-world-notebook.png
 
@@ -15,7 +18,7 @@ between the Minecraft server and the IPython notebook server.
 
 #. In the Minecraft game, look for the ``Hello Minecraft!``
    message. If you don't see it, try opening chat by typing
-   :kbd:`T`. You should see soimething like the following:
+   :kbd:`T`. You should see something like the following:
 
    .. image:: _images/hello-world-minecraft.png
 

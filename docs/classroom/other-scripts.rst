@@ -3,10 +3,13 @@
 ==========================
 
 In addition to the prepared IPython exercises, your IPython instance
-has access to plenty of other Python scripts. They don't show up in
-your view by default, but you saw how to list them and load them in
-*Exercise 2: Getting Started with IPython*. Here are some that might
-be fun to play with:
+has access to plenty of other IPython examples. The examples should be
+visible in your IPython notebook session, under the folder named
+:file:`examples`. If you cannot see the :file:`examples` folder in
+IPython, click on the icon of the house to navigate to the top level
+folder.
+
+Here are some that might be fun to play with:
 
 sphere.py
    This script creates spherical objects in your Minecraft world.
@@ -20,8 +23,3 @@ sleepyoz_analogclock.py
    clock in your Minecraft world. Really cool.
 
 .. todo:: Test and summarize more of the classic scripts.
-
-You can also look through the scripts in the online python-minecraft_
-repository.
-
-.. _python-minecraft: https://github.com/CoderDojoTC/python-minecraft
