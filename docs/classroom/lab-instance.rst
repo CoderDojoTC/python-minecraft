@@ -69,6 +69,10 @@ The steps involved in connecting to IPython include:
 
 #. Enter the IPython password when prompted.
 
+You should see a screen like the one below:
+
+.. image:: _images/ipython-notebook.png
+
 
 Connect to the Minecraft Server
 ===============================

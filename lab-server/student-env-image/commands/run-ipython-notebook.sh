@@ -51,17 +51,30 @@ EOF
 
 if [ ! -d ${MINECRAFT_LAB}/notebooks ]; then
     mkdir -p ${MINECRAFT_LAB}
-    git clone ${CODERDOJO_REPO} ${MINECRAFT_LAB}/notebooks
-    # TODO: Replace the above with a sparse checkout of only the needed stuff
 
-    # Fix up permissions
-    chown -R ${LAB_USER}:${LAB_USER} ${MINECRAFT_LAB}/notebooks
+    if [ -d /vagrant ]; then
+	mkdir -p ${MINECRAFT_LAB}/notebooks
+
+	# Copy from the Vagrant-supplied location.
+	unison /vagrant ${MINECRAFT_LAB}/notebooks -auto -batch -ignore 'Path .git' -ignore 'Path .vagrant' -ignore 'Path */.ipynb_checkpoints'
+
+    else
+	# Pull from a git repository
+	git clone ${CODERDOJO_REPO} ${MINECRAFT_LAB}/notebooks
+	# TODO: Replace the above with a sparse checkout of only the
+	# needed stuff
+    fi
 fi
+
+# Fix up permissions
+chown -R ${LAB_USER}:${LAB_USER} ${MINECRAFT_LAB}/notebooks
+
+# Install the MCPI library
+pip install --upgrade ${MINECRAFT_LAB}/notebooks
 
 
 # ----------------------------------------------------------------------------
 # Start the server
 
 cd ${MINECRAFT_LAB}/notebooks
-chown -R ${LAB_USER}:${LAB_USER} .
 exec su ${LAB_USER} -c "ipython notebook --profile=nbserver"

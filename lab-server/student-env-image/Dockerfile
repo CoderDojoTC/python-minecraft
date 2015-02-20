@@ -24,6 +24,7 @@ RUN apt-get update \
         python-pygame \
         supervisor \
         tmux \
+        unison \
         unzip \
         zip \
     && apt-get clean \

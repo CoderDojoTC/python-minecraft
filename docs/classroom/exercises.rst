@@ -4,13 +4,15 @@
 
 We have a handful of exercises prepared for your exploration in the
 classroom. The exercises should be visible in your IPython notebook
-session.
+session, under the folder named :file:`exercises`. If you cannot see
+the :file:`exercises` folder in IPython, click on the icon of the
+house to navigate to the top level folder.
 
 Exercise 1: Hello World!
    You've probably already walked through this exercise as part of
    testing your environment, but later on, you might see if you can
-   change it to do someting more interesting, like saying your name or
-   printing the current time.
+   change it to do something more interesting, like saying your name
+   or printing the current time.
 
 Exercise 2: Getting Started with IPython
    This exercise gets you familiar with the IPython environment.
