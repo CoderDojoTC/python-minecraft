@@ -5,6 +5,10 @@
 The following changes have been made to the classroom materials over
 time. Look for annotated Git tags that match the headings below.
 
+The `full changelog`_ is available on GitHub.
+
+.. _full changelog: https://github.com/CoderDojoTC/python-minecraft/commits/master
+
 
 Latest (untagged release)
 =========================
@@ -17,6 +21,22 @@ Latest (untagged release)
 * Reorganized the exercises and examples into subfolders, and
   converted all the previous :file:`*.py` files into :file:`*.ipynb`
   files so students can load them directly in IPython.
+
+* Improved our classroom exercises:
+
+  * **Exercise 1:** Reformatted Hello World to be a single code block
+    so that it's easier to run, added some hints, and added some extra
+    challenges.
+
+  * **Exercise 2:** Took out the TNT Pyramid (which was too big and
+    distracting), pointed students to the online help and guided tour,
+    wrote more about added the REPL environment.
+
+  * **Exercise 4:** Added a delay so students have a chance to observe
+    what is happening as the script runs, added some extra challenges.
+
+  * **Exercise 5:** Added a field of wool so students have something
+    that will react to sword strikes.
 
 * Upgraded to CanaryRaspberryJuice version 1.2. This added methods
   such as getPlayerId(playerName), getDirection(), getRotation(), and
