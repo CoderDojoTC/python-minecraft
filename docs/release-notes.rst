@@ -10,8 +10,8 @@ The `full changelog`_ is available on GitHub.
 .. _full changelog: https://github.com/CoderDojoTC/python-minecraft/commits/master
 
 
-Latest (untagged release)
-=========================
+2015-02-21
+==========
 
 * Simplify the generated world in the student lab instance to make it
   better for programming projects. Now, the students are placed in a
