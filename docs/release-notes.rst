@@ -38,6 +38,9 @@ Latest (untagged release)
   * **Exercise 5:** Added a field of wool so students have something
     that will react to sword strikes.
 
+* Updated some example scripts to work better in our new student
+  environment.
+
 * Upgraded to CanaryRaspberryJuice version 1.2. This added methods
   such as getPlayerId(playerName), getDirection(), getRotation(), and
   getPitch(). This also includes version 1.1, which added various
