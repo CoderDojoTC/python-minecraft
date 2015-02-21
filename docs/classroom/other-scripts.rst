@@ -11,15 +11,54 @@ folder.
 
 Here are some that might be fun to play with:
 
-sphere.py
-   This script creates spherical objects in your Minecraft world.
+Simple Sripts
+=============
 
-sphere_hollow.py
-   This script shows you how to make spheres hollow: fill them with
-   air. This technique comes in handy in other places, too.
+These scripts are pretty simple, and good places for beginners to
+start:
 
-sleepyoz_analogclock.py
-   This script is awfully complex, but it draws and animates an analog
-   clock in your Minecraft world. Really cool.
+blink
+-----
 
-.. todo:: Test and summarize more of the classic scripts.
+This simple script creates a block that flips between different
+block types, making it seem to blink.
+
+
+Moderate Sripts
+===============
+
+These scripts are a step more complex. Move on to these when you are
+ready for a challenge.
+
+
+brooksc_tntsnake
+----------------
+
+This script makes a "snake" of TNT through your world.
+
+
+sphere
+------
+
+This script creates spherical objects in your Minecraft world.
+
+
+sphere_hollow
+-------------
+
+This script shows you how to make spheres hollow: fill them with
+air. This technique comes in handy in other places, too.
+
+
+Advanced Sripts
+===============
+
+These scripts are really complex. If you can figure these out, you are
+ready to make your own Mods.
+
+
+sleepyoz_analogclock
+--------------------
+
+This script draws and animates an analog clock in your Minecraft
+world. Really cool.
