@@ -76,5 +76,5 @@ pip install --upgrade ${MINECRAFT_LAB}/notebooks
 # ----------------------------------------------------------------------------
 # Start the server
 
-cd ${MINECRAFT_LAB}/notebooks
+cd ${MINECRAFT_LAB}/notebooks/classroom-code
 exec su ${LAB_USER} -c "ipython notebook --profile=nbserver"
