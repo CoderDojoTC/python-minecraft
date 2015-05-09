@@ -89,8 +89,9 @@ The steps involved in connecting to Minecraft include:
    working through these exercises at home, use your personal
    Minecraft account.
 
-#. Create a profile and make sure it uses version ``release 1.7.10``
-   of the game. The image below illustrates what a properly configured
+#. Create a profile and make sure it uses the latest patch in the 1.8
+   release series. For example, you can specify ``release 1.8.4`` of
+   the game. The image below illustrates what a properly configured
    profile will loook like:
 
    .. image:: _images/minecraft-profile.png
