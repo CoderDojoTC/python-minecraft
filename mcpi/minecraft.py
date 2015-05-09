@@ -1,6 +1,6 @@
 from connection import Connection
 from vec3 import Vec3
-from event import BlockEvent
+from event import BlockEvent, ChatEvent
 from block import Block
 import math
 from util import flatten
@@ -24,6 +24,7 @@ from util import flatten
     - CmdPositioner.getPitch
     - CmdPositioner.getRotation
     - getPlayerEntityId
+    - CmdEvents.pollChatPosts
     """
 
 
@@ -136,6 +137,11 @@ class CmdEvents:
         events = [e for e in s.split("|") if e]
         return [BlockEvent.Hit(*map(int, e.split(","))) for e in events]
 
+    def pollChatPosts(self):
+        """Triggered by posts to chat => [ChatEvent]"""
+        s = self.conn.sendReceive("events.chat.posts")
+        events = [e for e in s.split("|") if e]
+        return [ChatEvent.Post(int(e[:e.find(",")]), e[e.find(",") + 1:]) for e in events]
 
 class Minecraft:
     """The main class to interact with a running instance of Minecraft Pi."""

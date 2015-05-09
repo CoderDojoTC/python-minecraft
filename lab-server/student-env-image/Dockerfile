@@ -31,7 +31,7 @@ RUN apt-get update \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 # Upgrade IPython to get improved usability of the Notebook server
-RUN pip install --upgrade ipython==2.4.0
+RUN pip install --upgrade jsonschema==2.4.0 tornado==4.0.0 ipython==3.1.0
 
 
 # ----------------------------------------------------------------------------
@@ -74,14 +74,9 @@ COPY default-canary-files/ /usr/local/share/default-canary-files/
 
 # Get a copy of the RaspberryJuice plugin from GitHub
 
-ADD https://github.com/martinohanlon/CanaryRaspberryJuice/blob/master/jars/canaryraspberryjuice-1.2.jar?raw=true /usr/local/share/default-canary-files/plugins/
+ADD https://github.com/martinohanlon/CanaryRaspberryJuice/blob/master/jars/canaryraspberryjuice-1.3.jar?raw=true /usr/local/share/default-canary-files/plugins/
 
 # Download the Canary jar file
 
-ADD https://ci.visualillusionsent.net/job/CanaryMod/631/artifact/target/CanaryMod-1.7.10-1.1.3-shaded.jar /usr/local/bin/
-
-
-# ----------------------------------------------------------------------------
-# Handle anything else
-
-#RUN ["/bin/dash", "-e", "/usr/local/bin/server-setup.sh"]
+#ADD https://ci.visualillusionsent.net/job/CanaryMod/805/artifact/target/CanaryMod-1.8.0-1.2.1-SNAPSHOT-shaded.jar /usr/local/bin/
+ADD http://canarymod.net/download/file/fid/231 /usr/local/bin/CanaryMod-1.8.0-1.2.0-shaded.jar
