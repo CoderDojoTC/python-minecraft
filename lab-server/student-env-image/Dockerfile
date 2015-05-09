@@ -78,5 +78,5 @@ ADD https://github.com/martinohanlon/CanaryRaspberryJuice/blob/master/jars/canar
 
 # Download the Canary jar file
 
-ADD https://ci.visualillusionsent.net/job/CanaryMod/805/artifact/target/CanaryMod-1.8.0-1.2.1-SNAPSHOT-shaded.jar /usr/local/bin/
-
+#ADD https://ci.visualillusionsent.net/job/CanaryMod/805/artifact/target/CanaryMod-1.8.0-1.2.1-SNAPSHOT-shaded.jar /usr/local/bin/
+ADD http://canarymod.net/download/file/fid/231 /usr/local/bin/CanaryMod-1.8.0-1.2.0-shaded.jar
