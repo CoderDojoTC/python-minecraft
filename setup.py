@@ -4,7 +4,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='mcpi',
-    version='0.1.1',
+    version='1.3',
     packages=find_packages(),
 
     description='Minecraft PI low level api',
