@@ -17,6 +17,16 @@ Unreleased Changes
   course, with less jumping between the static docs and the live
   environment.
 
+* Added some tools to help with course content development:
+
+  * Added a :file:`requirements.txt` file for use in setting up a
+    Python environment with the necessary tools.
+
+  * Added a `Fabric`_ script (:file:`fabfile.py`) to help automate
+    tasks performed while developing and delivering the course.
+
+.. _Fabric: http://www.fabfile.org/
+
 
 2015-08-01
 ==========

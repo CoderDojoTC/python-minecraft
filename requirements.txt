@@ -1,0 +1,9 @@
+# This is a Pip requirements file. Use it to install the Python tools
+# needed to develop and support the python-minecraft course as follows:
+#
+#     virtualenv .env
+#     pip install --upgrade -r requirements.txt
+
+Fabric==1.10.1
+docker-py==1.2.3-rc1
+sphinx==1.3.1
