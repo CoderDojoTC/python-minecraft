@@ -10,6 +10,30 @@ The `full changelog`_ is available on GitHub.
 .. _full changelog: https://github.com/CoderDojoTC/python-minecraft/commits/master
 
 
+2015-05-09
+==========
+
+* Upgraded to CanaryMod 1.2.0 (compatible with Minecraft client
+  version 1.8), version 1.3 of the RaspberryJuice plugin, and the
+  latest python libraries that support them. This brings some new
+  programming capabilities, such as being able to have Python code
+  receive messages from the game chat.
+
+* Added Martin O'Hanlon's *Minecraft Turtles* so that students can use
+  the library and run the examples. This gives students a logo-like
+  model for writing programs.
+
+* Upgraded to IPython 3.1.0. This improves the development user
+  interface. It also changes the "branding" of the development UI from
+  "IPython" to "Jupyter".
+
+* Removed many calls to the obsolete ``server`` module from example
+  scripts in the :file:`examples` folder (thanks to Joshua Fasching).
+
+* Fixed a problem where it seemed to rain in Minecraft from time to
+  time.
+
+
 2015-02-21
 ==========
 
