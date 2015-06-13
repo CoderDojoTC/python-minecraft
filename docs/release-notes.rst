@@ -9,6 +9,14 @@ The `full changelog`_ is available on GitHub.
 
 .. _full changelog: https://github.com/CoderDojoTC/python-minecraft/commits/master
 
+Unreleased Changes
+==================
+
+* Began migrating documentation into the Jupyter/IPython
+  notebook. This gives the students a more integrated path through the
+  course, with less jumping between the static docs and the live
+  environment.
+
 
 2015-05-09
 ==========
