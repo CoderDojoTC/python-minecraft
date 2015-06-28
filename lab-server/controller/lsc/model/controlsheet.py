@@ -6,6 +6,7 @@ import logging
 from collections import namedtuple
 
 import gspread
+from oauth2client.client import SignedJwtAssertionCredentials
 
 
 # Give easier names to the column headings in the Sheet
@@ -78,7 +79,9 @@ class Data(object):
         ''' Connect to Google '''
 
         # Login with a Google account
-        gc = gspread.login(self.email, self.password)
+        scope = ['https://spreadsheets.google.com/feeds']
+        credentials = SignedJwtAssertionCredentials(self.email, self.password, scope)
+        gc = gspread.authorize(credentials)
 
         # Open the spreadsheet and worksheet
         spreadsheet = gc.open(self.sheetname)
