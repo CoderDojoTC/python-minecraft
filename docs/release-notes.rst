@@ -21,6 +21,9 @@ Unreleased Changes
 2015-08-01
 ==========
 
+* Fixed the lab server controler to work with the latest version of
+  gspread, which requires OAuth2.
+
 * Changed the source location where we pull the Canary JAR file. The
   CanaryMod project is going through some changes, and have
   reorganized where files are available on their web server.
