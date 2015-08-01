@@ -57,6 +57,20 @@ tmux send-keys -t ${SESSION_NAME} 'weather clear 999999' C-m
 # 'stop' command to Canary if we get one.
 trap "tmux send-keys -t ${SESSION_NAME} stop C-m" TERM INT QUIT
 
+# -- DIRTY HACK WARNING ------------------------------------------------------
+
+# NOTE: This is a dirty hack. For some reason, Canary is failing to
+# determine the UUID of the players listed in ops.txt on startup, so
+# I've had to put this reactive code here to do the job after the
+# player joins the server.
+
+sleep 10
+while ! ( grep -iq "\[INFO\]: ${MOJANG_ACCOUNTS} joined the game" ${MINECRAFT_LAB}/server-files/logs/latest.log  && tmux send-keys -t ${SESSION_NAME} "op ${MOJANG_ACCOUNTS}" C-m ) ; do
+    tmux send-keys -t ${SESSION_NAME} "say Waiting for ${MOJANG_ACCOUNTS} to join the game..." C-m
+    sleep 5
+done
+# -- DIRTY HACK WARNING ------------------------------------------------------
+
 # Pause here until the original session kicks out the "minecraft-out"
 # signal (generated with the tmux wait-for -S).
 tmux wait-for minecraft-out
