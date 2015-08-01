@@ -18,6 +18,20 @@ Unreleased Changes
   environment.
 
 
+2015-08-01
+==========
+
+* Changed the source location where we pull the Canary JAR file. The
+  CanaryMod project is going through some changes, and have
+  reorganized where files are available on their web server.
+
+* Added a dirty hack to work around a problem that Canary seems to be
+  having in determining the UUID of the players listed in ops.txt on
+  startup. I've had to put this reactive code in the run-canary.sh
+  script to do the job after the player joins the server. A better
+  long-term fix is to find the root cause in Canary itself.
+
+
 2015-05-09
 ==========
 
