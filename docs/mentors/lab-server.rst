@@ -52,7 +52,7 @@ contents of the python-minecraft repository.
 
 #. Clone our repository::
 
-     git clone git clone https://github.com/CoderDojoTC/python-minecraft.git python-minecraft
+     git clone https://github.com/CoderDojoTC/python-minecraft.git python-minecraft
      cd python-minecraft
      cd lab-server
 
