@@ -98,7 +98,7 @@ content like the following:
 
 .. code-block:: ini
 
-   [Lab Config Data]
+   [Lab Config Sheet]
    email = your-google-account-email@example.com
    password = YOUR_APPLICATION_SPECIFIC_GOOGLE_PASSWORD
    spreadsheet = Lab Server Controller
