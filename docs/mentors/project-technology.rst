@@ -25,7 +25,7 @@ it will generate a linkable `result like this one`_.
 
 .. _IPython Notebook: http://ipython.org/ipython-doc/stable/notebook/index.html
 .. _online notebook viewer: http://nbviewer.ipython.org
-.. _result like this one: http://nbviewer.ipython.org/github/CoderDojoTC/python-minecraft/blob/master/Exercise%20%201%20--%20Hello%20World.ipynb
+.. _result like this one: http://nbviewer.ipython.org/github/CoderDojoTC/python-minecraft/blob/master/classroom-code/exercises/Exercise%20%201%20--%20Hello%20World.ipynb
 
 
 Online Resources
