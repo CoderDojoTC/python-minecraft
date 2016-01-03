@@ -154,7 +154,7 @@ Minecraft
  #. Right click on the :file:`Minecraft.exe` and save it into your
     :file:`MinecraftMod` folder.
 
- #. Do the same with the :file:`Minecraft_server.1.8.exe` file. We
+ #. Do the same with the :file:`Minecraft_server.1.8.9.exe` file. We
     plan to use the CanaryMod server instead, but it may be useful to
     have the vanilla server for troubleshooting.
 
