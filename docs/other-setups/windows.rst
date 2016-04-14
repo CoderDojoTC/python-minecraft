@@ -136,13 +136,13 @@ repository, so we will copy it from there.
 
  #. After the Clone process finishes, open the
     :file:`MinecraftMod\\CanaryRaspberryJuice\\jars` folder. Copy the
-    file named :file:`canaryraspberryjuice-1.0.jar` into
+    file named :file:`canaryraspberryjuice-1.3.jar` into
     :file:`MinecraftMod\\CanaryMod\\plugins`.
 
 Restart the CanaryMod server again (double-clicking on the
 :command:`startserver.bat` script). This time, among the log messages,
 you should see one that reads ``[INFO]: Enabling
-CanaryRaspberryJuicePlugin Version 1.0``.
+CanaryRaspberryJuicePlugin Version 1.3``.
 
 
 Minecraft
@@ -154,7 +154,7 @@ Minecraft
  #. Right click on the :file:`Minecraft.exe` and save it into your
     :file:`MinecraftMod` folder.
 
- #. Do the same with the :file:`Minecraft_server.1.8.exe` file. We
+ #. Do the same with the :file:`Minecraft_server.1.8.9.exe` file. We
     plan to use the CanaryMod server instead, but it may be useful to
     have the vanilla server for troubleshooting.
 

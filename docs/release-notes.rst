@@ -12,6 +12,11 @@ The `full changelog`_ is available on GitHub.
 Unreleased Changes
 ==================
 
+* Merged several documentation fixes from `Markus Khouri`_. Thanks
+  Markus!
+
+.. _Markus Khouri: https://github.com/markuskhouri
+
 * Began migrating documentation into the Jupyter/IPython
   notebook. This gives the students a more integrated path through the
   course, with less jumping between the static docs and the live

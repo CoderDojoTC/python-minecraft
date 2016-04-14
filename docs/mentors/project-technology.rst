@@ -10,22 +10,22 @@ group`.
 Technologies
 ============
 
-IPython
+Jupyter
 -------
 
 The interface to Python used by the students during our workshop is
-the `IPython Notebook`_. The Python code is embedded in IPython
+the `Jupyter Notebook`_. The Python code is embedded in Jupyter
 Notebook files, which are the files named :file:`*.ipynb` in the
 source code repository.
 
-The IPython project hosts an `online notebook viewer`_ that can turn
+The Jupyter project hosts an `online notebook viewer`_ that can turn
 these ``ipynb`` files into easily readable versions. Just paste any
 URL from a GitHub file into the box on the NBViewer site, and  and you will
 it will generate a linkable `result like this one`_.
 
-.. _IPython Notebook: http://ipython.org/ipython-doc/stable/notebook/index.html
-.. _online notebook viewer: http://nbviewer.ipython.org
-.. _result like this one: http://nbviewer.ipython.org/github/CoderDojoTC/python-minecraft/blob/master/Exercise%20%201%20--%20Hello%20World.ipynb
+.. _Jupyter Notebook: https://jupyter-notebook.readthedocs.org/en/latest/
+.. _online notebook viewer: http://nbviewer.jupyter.org
+.. _result like this one: http://nbviewer.jupyter.org/github/CoderDojoTC/python-minecraft/blob/master/classroom-code/exercises/
 
 
 Online Resources
